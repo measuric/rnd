@@ -1,0 +1,271 @@
+/**
+ * ProductExtension.java
+ *
+ * This file was auto-generated from WSDL
+ * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ */
+
+package routines;
+
+
+/**
+ * Metadata to be used for retrieving offers from Google Base.
+ */
+public class ProductExtension  extends routines.AdExtension  implements java.io.Serializable {
+    /* Google Base customer id
+     *                     <span class="constraint Selectable">This field
+     * can be selected using the value "GoogleBaseCustomerId".</span>
+     *                     <span class="constraint Required">This field is
+     * required and should not be {@code null}.</span> */
+    private java.lang.Integer googleBaseCustomerId;
+
+    /* Advertiser name
+     *                     <span class="constraint Selectable">This field
+     * can be selected using the value "AdvertiserName".</span>
+     *                     <span class="constraint Required">This field is
+     * required and should not be {@code null}.</span> */
+    private java.lang.String advertiserName;
+
+    /* List of ProductConditionAndGroups to OR together to determine
+     * if a product in the feed
+     *                     should be eligible to show. If this list is null/empty,
+     * there are no selection criteria
+     *                     to enforce on the feed (ie. all products in the
+     * feed are eligible).
+     *                     <span class="constraint ReadOnly">This field is
+     * read only and should not be set for following {@link Operator}s :
+     * SET, REMOVE.  If this field is sent to the API, it will be ignored.</span> */
+    private routines.ProductCondition[][] productSelection;
+
+    public ProductExtension() {
+    }
+
+    public ProductExtension(
+           java.lang.Long id,
+           java.lang.String adExtensionType,
+           java.lang.Integer googleBaseCustomerId,
+           java.lang.String advertiserName,
+           routines.ProductCondition[][] productSelection) {
+        super(
+            id,
+            adExtensionType);
+        this.googleBaseCustomerId = googleBaseCustomerId;
+        this.advertiserName = advertiserName;
+        this.productSelection = productSelection;
+    }
+
+
+    /**
+     * Gets the googleBaseCustomerId value for this ProductExtension.
+     * 
+     * @return googleBaseCustomerId   * Google Base customer id
+     *                     <span class="constraint Selectable">This field
+     * can be selected using the value "GoogleBaseCustomerId".</span>
+     *                     <span class="constraint Required">This field is
+     * required and should not be {@code null}.</span>
+     */
+    public java.lang.Integer getGoogleBaseCustomerId() {
+        return googleBaseCustomerId;
+    }
+
+
+    /**
+     * Sets the googleBaseCustomerId value for this ProductExtension.
+     * 
+     * @param googleBaseCustomerId   * Google Base customer id
+     *                     <span class="constraint Selectable">This field
+     * can be selected using the value "GoogleBaseCustomerId".</span>
+     *                     <span class="constraint Required">This field is
+     * required and should not be {@code null}.</span>
+     */
+    public void setGoogleBaseCustomerId(java.lang.Integer googleBaseCustomerId) {
+        this.googleBaseCustomerId = googleBaseCustomerId;
+    }
+
+
+    /**
+     * Gets the advertiserName value for this ProductExtension.
+     * 
+     * @return advertiserName   * Advertiser name
+     *                     <span class="constraint Selectable">This field
+     * can be selected using the value "AdvertiserName".</span>
+     *                     <span class="constraint Required">This field is
+     * required and should not be {@code null}.</span>
+     */
+    public java.lang.String getAdvertiserName() {
+        return advertiserName;
+    }
+
+
+    /**
+     * Sets the advertiserName value for this ProductExtension.
+     * 
+     * @param advertiserName   * Advertiser name
+     *                     <span class="constraint Selectable">This field
+     * can be selected using the value "AdvertiserName".</span>
+     *                     <span class="constraint Required">This field is
+     * required and should not be {@code null}.</span>
+     */
+    public void setAdvertiserName(java.lang.String advertiserName) {
+        this.advertiserName = advertiserName;
+    }
+
+
+    /**
+     * Gets the productSelection value for this ProductExtension.
+     * 
+     * @return productSelection   * List of ProductConditionAndGroups to OR together to determine
+     * if a product in the feed
+     *                     should be eligible to show. If this list is null/empty,
+     * there are no selection criteria
+     *                     to enforce on the feed (ie. all products in the
+     * feed are eligible).
+     *                     <span class="constraint ReadOnly">This field is
+     * read only and should not be set for following {@link Operator}s :
+     * SET, REMOVE.  If this field is sent to the API, it will be ignored.</span>
+     */
+    public routines.ProductCondition[][] getProductSelection() {
+        return productSelection;
+    }
+
+
+    /**
+     * Sets the productSelection value for this ProductExtension.
+     * 
+     * @param productSelection   * List of ProductConditionAndGroups to OR together to determine
+     * if a product in the feed
+     *                     should be eligible to show. If this list is null/empty,
+     * there are no selection criteria
+     *                     to enforce on the feed (ie. all products in the
+     * feed are eligible).
+     *                     <span class="constraint ReadOnly">This field is
+     * read only and should not be set for following {@link Operator}s :
+     * SET, REMOVE.  If this field is sent to the API, it will be ignored.</span>
+     */
+    public void setProductSelection(routines.ProductCondition[][] productSelection) {
+        this.productSelection = productSelection;
+    }
+
+    public routines.ProductCondition[] getProductSelection(int i) {
+        return this.productSelection[i];
+    }
+
+    public void setProductSelection(int i, routines.ProductCondition[] _value) {
+        this.productSelection[i] = _value;
+    }
+
+    private java.lang.Object __equalsCalc = null;
+    public synchronized boolean equals(java.lang.Object obj) {
+        if (!(obj instanceof ProductExtension)) return false;
+        ProductExtension other = (ProductExtension) obj;
+        if (obj == null) return false;
+        if (this == obj) return true;
+        if (__equalsCalc != null) {
+            return (__equalsCalc == obj);
+        }
+        __equalsCalc = obj;
+        boolean _equals;
+        _equals = super.equals(obj) && 
+            ((this.googleBaseCustomerId==null && other.getGoogleBaseCustomerId()==null) || 
+             (this.googleBaseCustomerId!=null &&
+              this.googleBaseCustomerId.equals(other.getGoogleBaseCustomerId()))) &&
+            ((this.advertiserName==null && other.getAdvertiserName()==null) || 
+             (this.advertiserName!=null &&
+              this.advertiserName.equals(other.getAdvertiserName()))) &&
+            ((this.productSelection==null && other.getProductSelection()==null) || 
+             (this.productSelection!=null &&
+              java.util.Arrays.equals(this.productSelection, other.getProductSelection())));
+        __equalsCalc = null;
+        return _equals;
+    }
+
+    private boolean __hashCodeCalc = false;
+    public synchronized int hashCode() {
+        if (__hashCodeCalc) {
+            return 0;
+        }
+        __hashCodeCalc = true;
+        int _hashCode = super.hashCode();
+        if (getGoogleBaseCustomerId() != null) {
+            _hashCode += getGoogleBaseCustomerId().hashCode();
+        }
+        if (getAdvertiserName() != null) {
+            _hashCode += getAdvertiserName().hashCode();
+        }
+        if (getProductSelection() != null) {
+            for (int i=0;
+                 i<java.lang.reflect.Array.getLength(getProductSelection());
+                 i++) {
+                java.lang.Object obj = java.lang.reflect.Array.get(getProductSelection(), i);
+                if (obj != null &&
+                    !obj.getClass().isArray()) {
+                    _hashCode += obj.hashCode();
+                }
+            }
+        }
+        __hashCodeCalc = false;
+        return _hashCode;
+    }
+
+    // Type metadata
+    private static org.apache.axis.description.TypeDesc typeDesc =
+        new org.apache.axis.description.TypeDesc(ProductExtension.class, true);
+
+    static {
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://adwords.google.com/api/adwords/cm/v201209", "ProductExtension"));
+        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("googleBaseCustomerId");
+        elemField.setXmlName(new javax.xml.namespace.QName("https://adwords.google.com/api/adwords/cm/v201209", "googleBaseCustomerId"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("advertiserName");
+        elemField.setXmlName(new javax.xml.namespace.QName("https://adwords.google.com/api/adwords/cm/v201209", "advertiserName"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("productSelection");
+        elemField.setXmlName(new javax.xml.namespace.QName("https://adwords.google.com/api/adwords/cm/v201209", "productSelection"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://adwords.google.com/api/adwords/cm/v201209", "ProductConditionAndGroup"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        elemField.setMaxOccursUnbounded(true);
+        typeDesc.addFieldDesc(elemField);
+    }
+
+    /**
+     * Return type metadata object
+     */
+    public static org.apache.axis.description.TypeDesc getTypeDesc() {
+        return typeDesc;
+    }
+
+    /**
+     * Get Custom Serializer
+     */
+    public static org.apache.axis.encoding.Serializer getSerializer(
+           java.lang.String mechType, 
+           java.lang.Class _javaType,  
+           javax.xml.namespace.QName _xmlType) {
+        return 
+          new  org.apache.axis.encoding.ser.BeanSerializer(
+            _javaType, _xmlType, typeDesc);
+    }
+
+    /**
+     * Get Custom Deserializer
+     */
+    public static org.apache.axis.encoding.Deserializer getDeserializer(
+           java.lang.String mechType, 
+           java.lang.Class _javaType,  
+           javax.xml.namespace.QName _xmlType) {
+        return 
+          new  org.apache.axis.encoding.ser.BeanDeserializer(
+            _javaType, _xmlType, typeDesc);
+    }
+
+}

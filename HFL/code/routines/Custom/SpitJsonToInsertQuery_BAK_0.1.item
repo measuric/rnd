@@ -1,0 +1,88 @@
+package routines;
+
+import java.util.Date;
+
+import net.sf.json.JSONObject;
+
+
+public class SpitJsonToInsertQuery {
+
+	public static String getInsertStrForEvent(int eventid ,String message) {
+		try{
+			if(message!= null)   {
+				//	message=message.replace(';', '-')	;
+				JSONObject obj = JSONObject.fromObject(message);
+				String insertquery ="("+eventid;
+				//	for(Object key : obj.keySet()){
+				//   System.out.println("key :: "+key + " - value :: "+obj.get(key));  
+
+
+				//	if("_n".equals(key) ||"_p".equals(key)||"_t".equals(key)){
+
+				Date d=routines.SpitJsonToInsertQuery.getJavadate(obj.get("_t").toString());
+				String datestr=TalendDate.formatDate("yyyy-MM-dd HH:mm:ss", d);
+				insertquery= insertquery +",'"+obj.get("_p")+"','"+obj.get("_n")+"','"+datestr+"')";
+			//	}
+				//	}
+				//	insertquery=insertquery.substring(0,insertquery.length()-1);
+			//	System.out.println("insertquery: " +insertquery);
+				//	System.out.println("=============================");
+				// Print the content on the console
+				//System.out.println (strLine);
+				return insertquery;
+			}
+			return "message is null";
+		}
+		catch(Exception e){
+			System.out.println("we got exception "+message);
+			return null;
+		} 
+	}
+
+	public static String getInsertStrForEventProp(int eventid ,String message) {
+
+		try{
+			if(message!= null)   {
+
+				JSONObject obj = JSONObject.fromObject(message);
+				String insertquery ="";
+				for(Object key : obj.keySet()){
+					//   System.out.println("key :: "+key + " - value :: "+obj.get(key));  
+
+					if(!("_n".equals(key) ||"_p".equals(key)||"_t".equals(key)))
+						insertquery= insertquery+"("+eventid+",'"+key+"','"+obj.get(key)+"'),";
+
+				}
+				if(insertquery!=null && insertquery.length() >1)
+				{
+					System.out.println("---------------");
+					insertquery=insertquery.substring(0,insertquery.length()-1);
+				}
+				else
+					System.out.println("null  message:  "+message);
+				//	System.out.println("Event Properties: " +insertquery);
+				//		System.out.println("=============================");
+				// Print the content on the console
+				//System.out.println (strLine);
+				return insertquery;
+			}
+			return null;
+		}
+		catch(Exception e){
+			System.out.println(" *************we got exception event properties "+message);
+			return null;
+		} 
+	} 
+
+	public static Date  getJavadate(String unixdate)
+	{
+		// String unixdate="1352805907";
+		long unixTime = Long.parseLong(unixdate);   
+
+		long timestamp = unixTime * 1000;  // msec  
+		java.util.Date javadate = new java.util.Date(timestamp);  
+		// System.out.println( "input = " + javadate.toString()  ); 
+		return  javadate;
+	}
+
+}

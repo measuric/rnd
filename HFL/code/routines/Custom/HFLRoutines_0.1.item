@@ -1,0 +1,35 @@
+package routines;
+
+public class HFLRoutines {
+
+
+    public static String getDimValues(String campaignname, String dimname){
+
+		if(campaignname!=null && campaignname.trim().length() >4 && campaignname.contains("-"))
+		{
+			String[] camparr= campaignname.split("-");
+			if(dimname.equals("country") && camparr.length >=0){
+				return camparr[0].trim();
+				
+			}
+			if(dimname.equals("product") && camparr.length >=1){
+				//System.out.println(camparr[1].trim());
+				return camparr[1].trim();
+				
+			}
+			
+		}
+
+		return null;
+	}
+    
+    public static String toInitCap(String param) {
+		if(param != null && param.length()>0){			
+			char[] charArray = param.toCharArray(); // convert into char array
+			charArray[0] = Character.toUpperCase(charArray[0]); // set capital letter to first postion
+			return new String(charArray); // return desired output
+		}else{
+			return null;
+		}
+	}	   
+   }

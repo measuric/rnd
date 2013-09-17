@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" confirmationNeeded="false" name="Default">
+  <contextParameter comment="" name="googleadcopyfilename" prompt="googleadcopyfilename?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter comment="" name="datafolder" prompt="datafolder?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter comment="" name="googlekeywordfilename" prompt="googlekeywordfilename?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter comment="" name="rootdirectory" prompt="rootdirectory?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter comment="" name="revenuefilename" prompt="revenuefilename?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter comment="" name="startdate" prompt="startdate?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter comment="" name="enddate" prompt="enddate?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter comment="" name="bingkeywordfilename" prompt="bingkeywordfilename?" promptNeeded="false" type="id_String" value="null"/>
+  <contextParameter comment="" name="bingadcopyfilename" prompt="bingadcopyfilename?" promptNeeded="false" type="id_String" value="null"/>
+</talendfile:ContextType>

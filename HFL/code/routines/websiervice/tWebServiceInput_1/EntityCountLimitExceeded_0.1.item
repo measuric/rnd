@@ -1,0 +1,211 @@
+/**
+ * EntityCountLimitExceeded.java
+ *
+ * This file was auto-generated from WSDL
+ * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ */
+
+package routines;
+
+
+/**
+ * Signals that an entity count limit was exceeded for some level.
+ * For example, too many criteria for a campaign.
+ */
+public class EntityCountLimitExceeded  extends routines.ApiError  implements java.io.Serializable {
+    /* Specifies which level's limit was exceeded. */
+    private routines.EntityCountLimitExceededReason reason;
+
+    /* Id of the entity whose limit was exceeded. */
+    private java.lang.String enclosingId;
+
+    /* The limit which was exceeded. */
+    private java.lang.Integer limit;
+
+    public EntityCountLimitExceeded() {
+    }
+
+    public EntityCountLimitExceeded(
+           java.lang.String fieldPath,
+           java.lang.String trigger,
+           java.lang.String errorString,
+           java.lang.String apiErrorType,
+           routines.EntityCountLimitExceededReason reason,
+           java.lang.String enclosingId,
+           java.lang.Integer limit) {
+        super(
+            fieldPath,
+            trigger,
+            errorString,
+            apiErrorType);
+        this.reason = reason;
+        this.enclosingId = enclosingId;
+        this.limit = limit;
+    }
+
+
+    /**
+     * Gets the reason value for this EntityCountLimitExceeded.
+     * 
+     * @return reason   * Specifies which level's limit was exceeded.
+     */
+    public routines.EntityCountLimitExceededReason getReason() {
+        return reason;
+    }
+
+
+    /**
+     * Sets the reason value for this EntityCountLimitExceeded.
+     * 
+     * @param reason   * Specifies which level's limit was exceeded.
+     */
+    public void setReason(routines.EntityCountLimitExceededReason reason) {
+        this.reason = reason;
+    }
+
+
+    /**
+     * Gets the enclosingId value for this EntityCountLimitExceeded.
+     * 
+     * @return enclosingId   * Id of the entity whose limit was exceeded.
+     */
+    public java.lang.String getEnclosingId() {
+        return enclosingId;
+    }
+
+
+    /**
+     * Sets the enclosingId value for this EntityCountLimitExceeded.
+     * 
+     * @param enclosingId   * Id of the entity whose limit was exceeded.
+     */
+    public void setEnclosingId(java.lang.String enclosingId) {
+        this.enclosingId = enclosingId;
+    }
+
+
+    /**
+     * Gets the limit value for this EntityCountLimitExceeded.
+     * 
+     * @return limit   * The limit which was exceeded.
+     */
+    public java.lang.Integer getLimit() {
+        return limit;
+    }
+
+
+    /**
+     * Sets the limit value for this EntityCountLimitExceeded.
+     * 
+     * @param limit   * The limit which was exceeded.
+     */
+    public void setLimit(java.lang.Integer limit) {
+        this.limit = limit;
+    }
+
+    private java.lang.Object __equalsCalc = null;
+    public synchronized boolean equals(java.lang.Object obj) {
+        if (!(obj instanceof EntityCountLimitExceeded)) return false;
+        EntityCountLimitExceeded other = (EntityCountLimitExceeded) obj;
+        if (obj == null) return false;
+        if (this == obj) return true;
+        if (__equalsCalc != null) {
+            return (__equalsCalc == obj);
+        }
+        __equalsCalc = obj;
+        boolean _equals;
+        _equals = super.equals(obj) && 
+            ((this.reason==null && other.getReason()==null) || 
+             (this.reason!=null &&
+              this.reason.equals(other.getReason()))) &&
+            ((this.enclosingId==null && other.getEnclosingId()==null) || 
+             (this.enclosingId!=null &&
+              this.enclosingId.equals(other.getEnclosingId()))) &&
+            ((this.limit==null && other.getLimit()==null) || 
+             (this.limit!=null &&
+              this.limit.equals(other.getLimit())));
+        __equalsCalc = null;
+        return _equals;
+    }
+
+    private boolean __hashCodeCalc = false;
+    public synchronized int hashCode() {
+        if (__hashCodeCalc) {
+            return 0;
+        }
+        __hashCodeCalc = true;
+        int _hashCode = super.hashCode();
+        if (getReason() != null) {
+            _hashCode += getReason().hashCode();
+        }
+        if (getEnclosingId() != null) {
+            _hashCode += getEnclosingId().hashCode();
+        }
+        if (getLimit() != null) {
+            _hashCode += getLimit().hashCode();
+        }
+        __hashCodeCalc = false;
+        return _hashCode;
+    }
+
+    // Type metadata
+    private static org.apache.axis.description.TypeDesc typeDesc =
+        new org.apache.axis.description.TypeDesc(EntityCountLimitExceeded.class, true);
+
+    static {
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://adwords.google.com/api/adwords/cm/v201209", "EntityCountLimitExceeded"));
+        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("reason");
+        elemField.setXmlName(new javax.xml.namespace.QName("https://adwords.google.com/api/adwords/cm/v201209", "reason"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://adwords.google.com/api/adwords/cm/v201209", "EntityCountLimitExceeded.Reason"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("enclosingId");
+        elemField.setXmlName(new javax.xml.namespace.QName("https://adwords.google.com/api/adwords/cm/v201209", "enclosingId"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("limit");
+        elemField.setXmlName(new javax.xml.namespace.QName("https://adwords.google.com/api/adwords/cm/v201209", "limit"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+    }
+
+    /**
+     * Return type metadata object
+     */
+    public static org.apache.axis.description.TypeDesc getTypeDesc() {
+        return typeDesc;
+    }
+
+    /**
+     * Get Custom Serializer
+     */
+    public static org.apache.axis.encoding.Serializer getSerializer(
+           java.lang.String mechType, 
+           java.lang.Class _javaType,  
+           javax.xml.namespace.QName _xmlType) {
+        return 
+          new  org.apache.axis.encoding.ser.BeanSerializer(
+            _javaType, _xmlType, typeDesc);
+    }
+
+    /**
+     * Get Custom Deserializer
+     */
+    public static org.apache.axis.encoding.Deserializer getDeserializer(
+           java.lang.String mechType, 
+           java.lang.Class _javaType,  
+           javax.xml.namespace.QName _xmlType) {
+        return 
+          new  org.apache.axis.encoding.ser.BeanDeserializer(
+            _javaType, _xmlType, typeDesc);
+    }
+
+}

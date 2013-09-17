@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" confirmationNeeded="false" name="Default">
+  <contextParameter comment="" name="serviceMail" prompt="serviceMail?" promptNeeded="false" type="id_String" value="152769973718@developer.gserviceaccount.com"/>
+  <contextParameter comment="" name="fileLocation" prompt="fileLocation?" promptNeeded="false" type="id_String" value="C:/GAAdmin/f1d20cef7c064f21ec6d9525cc05791a76356672-privatekey.p12"/>
+  <contextParameter comment="" name="profile" prompt="profile?" promptNeeded="false" type="id_String" value="63918313"/>
+</talendfile:ContextType>

@@ -1,0 +1,142 @@
+package routines;
+
+public class IntegrationHelper {
+	
+	public static String getNewPackingMessage(ShippingObject shippingObject){
+		StringBuilder sb = new StringBuilder();
+		sb.append("SHIPPING;");
+		sb.append(shippingObject.getCartonCode()+";");
+		sb.append(shippingObject.getTrackingCode()+";");
+		sb.append(shippingObject.getCartonWeight()+";");
+		sb.append(shippingObject.getShippingLane()+";");
+		sb.append(shippingObject.getCompany()+";");
+		sb.append(shippingObject.getWarehouse()+";");
+		sb.append(shippingObject.getIpAddress()+";");
+		sb.append(shippingObject.getPortNumberIRMSShippingServer());
+		return sb.toString();
+	}
+
+    public static String getNewToteMessage(ConveyorType type, InductionObject induction) {
+    	if (type == null) throw new java.lang.NullPointerException("ConveyorType must not be null.");
+    	if (induction == null) throw new java.lang.NullPointerException("InductionObject must not be null.");
+    	
+    	switch (type) {
+    		case TrafficApp:
+    			return getTrafficAppNewToteMessage(induction);
+    		case Dematic:
+    			return getDematicNewToteMessage(induction);
+    		case Other:
+    			return getOtherNewToteMessage(induction);
+    	}
+    	
+    	return null;
+    }
+    
+    public static String getDuplicateToteMessage(ConveyorType type, InductionResponse response) {
+    	if (type == null) throw new java.lang.NullPointerException("ConveyorType must not be null.");
+    	if (response == null) throw new java.lang.NullPointerException("InductionObject must not be null.");
+    	
+    	switch (type) {
+	    	case TrafficApp:
+	    		return getTrafficAppDuplicateToteMessage(type, response);
+	    	case Dematic:
+	    		return getDematicDuplicateToteMessage(type, response);
+	    	case Other:
+	    		return getOtherDuplicateToteMessage(type, response);
+    	}
+    	
+    	return null;
+    }
+    
+    public static String getReceivingToteMessage(ConveyorType type, InductionObject induction) {
+    	if (type == null) throw new java.lang.NullPointerException("ConveyorType must not be null.");
+    	if (induction == null) throw new java.lang.NullPointerException("InductionObject must not be null.");
+    	
+    	switch (type) {
+    		case TrafficApp:
+    			return getTrafficAppReceivingToteMessage(induction);
+    		case Dematic:
+    			return getDematicReceivingToteMessage(induction);
+    		case Other:
+    			return getOtherReceivingToteMessage(induction);
+    	}
+    	
+    	return null;
+    }
+
+	private static String getTrafficAppNewToteMessage(InductionObject induction) {
+    	StringBuilder sb = new StringBuilder();
+    	
+    	sb.append((induction.getZoneGroupCode() == null ? "NEWORDER" : (induction.getZoneGroupCode().equals("4") ? "BOOTHLMT" : "NEWORDER")) + ";"); // message type
+    	sb.append(TalendDate.getDate("hhmmss").toString() + ";"); // counter
+    	sb.append(TalendDate.getDate("CCYYMMDD").toString() + ";"); // date
+    	sb.append(TalendDate.getDate("hh:mm:ss") + ";"); // time
+    	sb.append(induction.getOrderCode() + (induction.getOrderSuffix() == null ? "" : induction.getOrderSuffix()) + ";"); // order id
+    	sb.append(induction.getLicensePlateCode() + ";"); // carton id
+    	sb.append(induction.getWeight() + ";"); // CalcWght
+    	sb.append(induction.getZoneCodes() + ";"); // dest
+    	sb.append("1;");//(induction.getPackLane() == null ? "" : induction.getPackLane()) + ";"); // pack lane
+    	sb.append("05;");//(induction.getShipLane() == null ? "" : induction.getShipLane()) + ";"); // ship lane
+    	sb.append("0001");//(induction.getBranchCode() == null ? "" : induction.getBranchCode())); // tote color
+    	
+    	return sb.toString();
+    }
+    
+    private static String getDematicNewToteMessage(InductionObject induction) {
+    	// TODO Auto-generated method stub
+		return null;
+    }
+    
+    private static String getOtherNewToteMessage(InductionObject induction) {
+    	// TODO Auto-generated method stub
+		return null;
+    }
+    
+    private static String getTrafficAppDuplicateToteMessage(ConveyorType type, InductionResponse response) {
+    	StringBuilder sb = new StringBuilder();
+    	
+    	sb.append("DUPLTOTE;");
+    	sb.append(response.getResultMessage() + ";");
+    	sb.append(TalendDate.getDate("CCYYMMDD").toString() + ";");
+    	sb.append(TalendDate.getDate("hh:mm:ss") + ";");
+    	sb.append(response.getOrder() + ";");
+    	sb.append(response.getCartonId() + ";");
+    	sb.append(response.getToteId() + ";");
+    	sb.append(response.getBranchCode());
+    	
+    	return sb.toString();
+    }
+    
+    private static String getDematicDuplicateToteMessage(ConveyorType type, InductionResponse response) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+    
+    private static String getOtherDuplicateToteMessage(ConveyorType type, InductionResponse response) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+    
+    private static String getTrafficAppReceivingToteMessage(InductionObject induction) {
+    	StringBuilder sb = new StringBuilder();
+    	
+    	sb.append("RECEIVING;");
+    	sb.append(induction.getLicensePlateCode() + ";");
+    	sb.append(induction.getZoneCodes() + ";");
+    	sb.append(induction.getStagingLocationCode() + ";");
+    	
+    	return sb.toString();
+    }
+    
+    private static String getDematicReceivingToteMessage(InductionObject induction) {
+    	StringBuilder sb = new StringBuilder();
+    	
+    	return sb.toString();
+    }
+    
+    private static String getOtherReceivingToteMessage(InductionObject induction) {
+    	StringBuilder sb = new StringBuilder();
+    	
+    	return sb.toString();
+    }
+}

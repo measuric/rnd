@@ -1,0 +1,1236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="dev">
+  <context confirmationNeeded="false" name="dev">
+    <contextParameter comment="" name="data_load_id" prompt="data_load_id?" promptNeeded="false" repositoryContextId="_3iQfwA5TEeKBw83zQfijuw" type="id_BigDecimal" value=""/>
+    <contextParameter comment="" name="expected_run_time" prompt="expected_run_time?" promptNeeded="false" repositoryContextId="_3iQfwA5TEeKBw83zQfijuw" type="id_String" value="3"/>
+    <contextParameter comment="" name="load_from" prompt="load_from?" promptNeeded="false" repositoryContextId="_3iQfwA5TEeKBw83zQfijuw" type="id_String" value="&quot;10-OCT-12&quot;"/>
+    <contextParameter comment="" name="load_to" prompt="load_to?" promptNeeded="false" repositoryContextId="_3iQfwA5TEeKBw83zQfijuw" type="id_String" value="&quot;31-DEC-2999&quot;"/>
+    <contextParameter comment="" name="sector" prompt="sector?" promptNeeded="false" repositoryContextId="_3iQfwA5TEeKBw83zQfijuw" type="id_String" value="&quot;Test Sector&quot;"/>
+    <contextParameter comment="" name="static_load_dir" prompt="static_load_dir?" promptNeeded="false" repositoryContextId="_3iQfwA5TEeKBw83zQfijuw" type="id_String" value="C:\Users\Matt\Desktop\Irvin Group LLC\Consulting\Elcom\Provided Resources\static csv files\"/>
+    <contextParameter comment="" name="rpt_db_AdditionalParams" prompt="rpt_db_AdditionalParams?" promptNeeded="false" repositoryContextId="_8kS8cA42EeKBw83zQfijuw" type="id_String" value=""/>
+    <contextParameter comment="" name="rpt_db_Login" prompt="rpt_db_Login?" promptNeeded="false" repositoryContextId="_8kS8cA42EeKBw83zQfijuw" type="id_String" value="pecos_rpt_dev2"/>
+    <contextParameter comment="" name="rpt_db_Password" prompt="rpt_db_Password?" promptNeeded="false" repositoryContextId="_8kS8cA42EeKBw83zQfijuw" type="id_Password" value="BQzCMz7pUBc="/>
+    <contextParameter comment="" name="rpt_db_Port" prompt="rpt_db_Port?" promptNeeded="false" repositoryContextId="_8kS8cA42EeKBw83zQfijuw" type="id_String" value="1521"/>
+    <contextParameter comment="" name="rpt_db_Schema" prompt="rpt_db_Schema?" promptNeeded="false" repositoryContextId="_8kS8cA42EeKBw83zQfijuw" type="id_String" value="PECOS_RPT_DEV2"/>
+    <contextParameter comment="" name="rpt_db_Server" prompt="rpt_db_Server?" promptNeeded="false" repositoryContextId="_8kS8cA42EeKBw83zQfijuw" type="id_String" value="74.208.44.72"/>
+    <contextParameter comment="" name="rpt_db_Sid" prompt="rpt_db_Sid?" promptNeeded="false" repositoryContextId="_8kS8cA42EeKBw83zQfijuw" type="id_String" value="xe"/>
+  </context>
+  <context confirmationNeeded="false" name="prod">
+    <contextParameter comment="" name="data_load_id" prompt="data_load_id?" promptNeeded="false" repositoryContextId="_3iQfwA5TEeKBw83zQfijuw" type="id_BigDecimal" value=""/>
+    <contextParameter comment="" name="expected_run_time" prompt="expected_run_time?" promptNeeded="false" repositoryContextId="_3iQfwA5TEeKBw83zQfijuw" type="id_String" value="3"/>
+    <contextParameter comment="" name="load_from" prompt="load_from?" promptNeeded="false" repositoryContextId="_3iQfwA5TEeKBw83zQfijuw" type="id_String" value="&quot;10-OCT-12&quot;"/>
+    <contextParameter comment="" name="load_to" prompt="load_to?" promptNeeded="false" repositoryContextId="_3iQfwA5TEeKBw83zQfijuw" type="id_String" value="&quot;31-DEC-2999&quot;"/>
+    <contextParameter comment="" name="sector" prompt="sector?" promptNeeded="false" repositoryContextId="_3iQfwA5TEeKBw83zQfijuw" type="id_String" value="&quot;Test Sector&quot;"/>
+    <contextParameter comment="" name="static_load_dir" prompt="static_load_dir?" promptNeeded="false" repositoryContextId="_3iQfwA5TEeKBw83zQfijuw" type="id_String" value="C:\Users\Matt\Desktop\Irvin Group LLC\Consulting\Elcom\Provided Resources\static csv files\"/>
+    <contextParameter comment="" name="rpt_db_AdditionalParams" prompt="rpt_db_AdditionalParams?" promptNeeded="false" repositoryContextId="_8kS8cA42EeKBw83zQfijuw" type="id_String" value=""/>
+    <contextParameter comment="" name="rpt_db_Login" prompt="rpt_db_Login?" promptNeeded="false" repositoryContextId="_8kS8cA42EeKBw83zQfijuw" type="id_String" value="pecos_rpt_dev2"/>
+    <contextParameter comment="" name="rpt_db_Password" prompt="rpt_db_Password?" promptNeeded="false" repositoryContextId="_8kS8cA42EeKBw83zQfijuw" type="id_Password" value="BQzCMz7pUBc="/>
+    <contextParameter comment="" name="rpt_db_Port" prompt="rpt_db_Port?" promptNeeded="false" repositoryContextId="_8kS8cA42EeKBw83zQfijuw" type="id_String" value="1521"/>
+    <contextParameter comment="" name="rpt_db_Schema" prompt="rpt_db_Schema?" promptNeeded="false" repositoryContextId="_8kS8cA42EeKBw83zQfijuw" type="id_String" value="PECOS_RPT_DEV2"/>
+    <contextParameter comment="" name="rpt_db_Server" prompt="rpt_db_Server?" promptNeeded="false" repositoryContextId="_8kS8cA42EeKBw83zQfijuw" type="id_String" value="74.208.44.72"/>
+    <contextParameter comment="" name="rpt_db_Sid" prompt="rpt_db_Sid?" promptNeeded="false" repositoryContextId="_8kS8cA42EeKBw83zQfijuw" type="id_String" value="xe"/>
+  </context>
+  <parameters>
+    <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value=" -Xms256M -Xmx1024M"/>
+    <elementParameter field="CHECK" name="JOB_RUN_VM_ARGUMENTS_OPTION" value="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="64"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPTIONS" value="none"/>
+    <elementParameter field="TEXT" name="OEM_CUSTOM_ATTRIBUTE" value=""/>
+    <elementParameter field="TEXT" name="HADOOP_APP_PATH" value=""/>
+    <elementParameter field="TEXT" name="JOBID_FOR_OOZIE" value=""/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="true"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value=""/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" value="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_10"/>
+    <elementParameter field="CHECK" name="UPDATE_COMPONENTS" value="false"/>
+    <elementParameter field="CHECK" name="STATS_DEFAULT_PROJECTSETTING" value="true"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" value="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" value="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE:PROPERTY_TYPE" value="BUILT_IN"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE:REPOSITORY_PROPERTY_TYPE" value=""/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter field="CHECK" name="IMPLICT_DEFAULT_PROJECTSETTING" value="true"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" value="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value=""/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value=""/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" value="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:PROPERTY_TYPE" value=""/>
+    <elementParameter field="TECHNICAL" name="PROPERTY_TYPE_IMPLICIT_CONTEXT:REPOSITORY_PROPERTY_TYPE" value=""/>
+    <routinesParameter id="_GpUoAB4XEeKpbOOOJxy8rA" name="DataOperation"/>
+    <routinesParameter id="_Gq1D4B4XEeKpbOOOJxy8rA" name="Mathematical"/>
+    <routinesParameter id="_GrqxYB4XEeKpbOOOJxy8rA" name="Numeric"/>
+    <routinesParameter id="_Gr6B8B4XEeKpbOOOJxy8rA" name="Relational"/>
+    <routinesParameter id="_GtGUwB4XEeKpbOOOJxy8rA" name="StringHandling"/>
+    <routinesParameter id="_GttYwB4XEeKpbOOOJxy8rA" name="TalendDataGenerator"/>
+    <routinesParameter id="_GuQyYB4XEeKpbOOOJxy8rA" name="TalendDate"/>
+    <routinesParameter id="_Gu0zEB4XEeKpbOOOJxy8rA" name="TalendString"/>
+  </parameters>
+  <node componentName="tOracleConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tOracleConnection_1"/>
+    <elementParameter field="CHECK" name="START" value="true"/>
+    <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_9OPRUA42EeKBw83zQfijuw"/>
+    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_SID"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_11"/>
+    <elementParameter field="TEXT" name="RAC_URL" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="USE_TNS_FILE" value="false"/>
+    <elementParameter field="FILE" name="TNS_FILE" value="&quot;&quot;"/>
+    <elementParameter field="TNS_EDITOR" name="TNS_EDITOR" value=""/>
+    <elementParameter field="TEXT" name="HOST" value="context.rpt_db_Server"/>
+    <elementParameter field="TEXT" name="TYPE" value="ORACLE_SID"/>
+    <elementParameter field="TEXT" name="PORT" value="context.rpt_db_Port"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.rpt_db_Sid"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.rpt_db_Schema"/>
+    <elementParameter field="TEXT" name="USER" value="context.rpt_db_Login"/>
+    <elementParameter field="TEXT" name="PASS" value="context.rpt_db_Password"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="context.rpt_db_AdditionalParams"/>
+    <elementParameter field="LABEL" name="NOTE" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;"/>
+    <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="SHARED_CONNECTION_NAME" value=""/>
+    <elementParameter field="TEXT" name="JDBC_URL" value="&quot;jdbc:oracle:thin:USER/MDP@server&quot;"/>
+    <elementParameter field="CHECK" name="AUTO_COMMIT" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="rpt_db_connection"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+  </node>
+  <node componentName="tOracleInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tOracleInput_1"/>
+    <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tOracleConnection_1"/>
+    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_SID"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_11"/>
+    <elementParameter field="TEXT" name="RAC_URL" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" value="Oracle"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1521&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PASS" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="JDBC_URL" value="&quot;jdbc:oracle:oci:/@talend&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;select&#xD;&#xA;nvl(ORG_UNIT_PK,0),&#xD;&#xA;nvl(ADDRESS_PK,0),&#xD;&#xA;nvl(TAX_TYPE_PK,0),&#xD;&#xA;nvl(LOCALE_LKUP_PK,0),&#xD;&#xA;nvl(RATE_AUTHORITY_PK,0),&#xD;&#xA;0 \&quot;nvl(OBJECT_SECURITY_PK,0)\&quot;,&#xD;&#xA;0 \&quot;nvl(GRM_GROUP_MEMBERS_PK,0)\&quot;,&#xD;&#xA;nvl(HRS_OF_OPER_CAL_PK,0),&#xD;&#xA;nvl(ORG_PASSWORD_RULES_PK,0),&#xD;&#xA;nvl(CURRENCY_CODE_PK,0),&#xD;&#xA;nvl(NO_OF_BRG_MEMBERSHIP,0),&#xD;&#xA;nvl(NO_OF_ARG_MEMBERSHIP,0),&#xD;&#xA;nvl(NO_OF_ROLES,0),&#xD;&#xA;nvl(NO_OF_TAX_TYPES,0),&#xD;&#xA;nvl(b.tax_settlement_tol_pct,0),&#xD;&#xA;nvl(b.freight_settlement_tol_pct,0),&#xD;&#xA;nvl(b.ord_settlement_tol_pct ,0),&#xD;&#xA;'Y',&#xD;&#xA;sysdate,&#xD;&#xA;to_date('31-DEC-2999','DD-MON-YYYY')&#xD;&#xA;from&#xD;&#xA;snap_hist_org_unit a,&#xD;&#xA;dim_org_unit b,&#xD;&#xA;dim_address c,&#xD;&#xA;lkp_tax_type d,&#xD;&#xA;lkp_locale_lkup e,&#xD;&#xA;lkp_rate_authority f,&#xD;&#xA;lkp_hrs_of_oper_cal i,&#xD;&#xA;lkp_org_password_rules j,&#xD;&#xA;lkp_currency_code q,&#xD;&#xA;org_unit_taxation_mv l,&#xD;&#xA;(select org_unit_id, count(*) no_of_tax_types from line_tax_types_mv group by org_unit_id) m,&#xD;&#xA;(select a.org_unit_id, count(*) no_of_brg_membership from dim_org_unit a, lkp_object_security b, lkp_grm_group_members c &#xD;&#xA;where object_type_id = 6 and b.object_id = c.grm_group_id and a.actv_rec_ind = 'Y' and b.actv_rec_ind = 'Y' and c.actv_rec_ind = 'Y' group by a.org_unit_id) n,&#xD;&#xA;(select a.org_unit_id, count(*) no_of_arg_membership from dim_org_unit a, lkp_object_security b, lkp_grm_group_members c &#xD;&#xA;where object_type_id = 5 and b.object_id = c.grm_group_id and a.actv_rec_ind = 'Y' and b.actv_rec_ind = 'Y' and c.actv_rec_ind = 'Y' group by a.org_unit_id) o,&#xD;&#xA;(select a.org_unit_id, count(*) no_of_roles from dim_org_unit a, lkp_object_security b &#xD;&#xA;where object_type_id = 10 and a.actv_rec_ind = 'Y' and b.actv_rec_ind = 'Y' group by a.org_unit_id) p&#xD;&#xA;where 1 = 1&#xD;&#xA;and b.org_unit_id(+) = a.org_unit_id&#xD;&#xA;and c.addr_id(+) = b.bill_to_addr_id&#xD;&#xA;and d.tax_type_id(+) = l.tax_type_id&#xD;&#xA;and l.org_unit_id(+) = a.org_unit_id&#xD;&#xA;and e.locale_id(+) = b.locale_id&#xD;&#xA;and f.authority_id(+) = b.rate_authority_id&#xD;&#xA;and i.calendar_id(+) = b.calendar_id&#xD;&#xA;and j.org_unit_id(+) = a.org_unit_id&#xD;&#xA;and l.org_unit_id(+) = a.org_unit_id&#xD;&#xA;and m.org_unit_id(+) = a.org_unit_id&#xD;&#xA;and n.org_unit_id(+) = a.org_unit_id&#xD;&#xA;and o.org_unit_id(+) = a.org_unit_id&#xD;&#xA;and p.org_unit_id(+) = a.org_unit_id&#xD;&#xA;and b.actv_rec_ind(+) = 'Y'&#xD;&#xA;and c.actv_rec_ind(+) = 'Y'&#xD;&#xA;and d.actv_rec_ind(+) = 'Y'&#xD;&#xA;and e.actv_rec_ind(+) = 'Y'&#xD;&#xA;and f.actv_rec_ind(+) = 'Y'&#xD;&#xA;and i.actv_rec_ind(+) = 'Y'&#xD;&#xA;and j.actv_rec_ind(+) = 'Y'&#xD;&#xA;and a.dmltype= 'D'&#xD;&#xA;&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="oracle_id"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;"/>
+    <elementParameter field="CHECK" name="IS_CONVERT_XMLTYPE" value="false"/>
+    <elementParameter field="TABLE" name="CONVERT_XMLTYPE"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_CURSOR" value="false"/>
+    <elementParameter field="TEXT" name="CURSOR_SIZE" value="1000"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="NVL_ORG_UNIT_PK_0_"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="NVL_ADDRESS_PK_0_"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="NVL_TAX_TYPE_PK_0_"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="NVL_LOCALE_LKUP_PK_0_"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="NVL_RATE_AUTHORITY_PK_0_"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="nvl_OBJECT_SECURITY_PK_0_"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="nvl_GRM_GROUP_MEMBERS_PK_0_"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="NVL_HRS_OF_OPER_CAL_PK_0_"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="NVL_ORG_PASSWORD_RULES_PK_0_"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="NVL_CURRENCY_CODE_PK_0_"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="NVL_NO_OF_BRG_MEMBERSHIP_0_"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="NVL_NO_OF_ARG_MEMBERSHIP_0_"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="NVL_NO_OF_ROLES_0_"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="NVL_NO_OF_TAX_TYPES_0_"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="NVL_B_TAX_SETTLEMENT_TOL_PCT_0_"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="NVL_B_FREIGHT_SETTLEMENT_TOL_PCT_0_"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="NVL_B_ORD_SETTLEMENT_TOL_PCT_0_"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ACTV_REC_IND"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="EFF_FM_TISTMP"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="EFF_TO_TISTMP"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="NO_NULL_VALUES" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tOracleInput_1">
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_ORG_UNIT_PK_0_" nullable="true" originalDbColumnName="NVL(ORG_UNIT_PK,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_ADDRESS_PK_0_" nullable="true" originalDbColumnName="NVL(ADDRESS_PK,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_TAX_TYPE_PK_0_" nullable="true" originalDbColumnName="NVL(TAX_TYPE_PK,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_LOCALE_LKUP_PK_0_" nullable="true" originalDbColumnName="NVL(LOCALE_LKUP_PK,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_RATE_AUTHORITY_PK_0_" nullable="true" originalDbColumnName="NVL(RATE_AUTHORITY_PK,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="nvl_OBJECT_SECURITY_PK_0_" nullable="true" originalDbColumnName="nvl(OBJECT_SECURITY_PK,0)" pattern="" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="nvl_GRM_GROUP_MEMBERS_PK_0_" nullable="true" originalDbColumnName="nvl(GRM_GROUP_MEMBERS_PK,0)" pattern="" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_HRS_OF_OPER_CAL_PK_0_" nullable="true" originalDbColumnName="NVL(HRS_OF_OPER_CAL_PK,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_ORG_PASSWORD_RULES_PK_0_" nullable="true" originalDbColumnName="NVL(ORG_PASSWORD_RULES_PK,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_CURRENCY_CODE_PK_0_" nullable="true" originalDbColumnName="NVL(CURRENCY_CODE_PK,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_NO_OF_BRG_MEMBERSHIP_0_" nullable="true" originalDbColumnName="NVL(NO_OF_BRG_MEMBERSHIP,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_NO_OF_ARG_MEMBERSHIP_0_" nullable="true" originalDbColumnName="NVL(NO_OF_ARG_MEMBERSHIP,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_NO_OF_ROLES_0_" nullable="true" originalDbColumnName="NVL(NO_OF_ROLES,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_NO_OF_TAX_TYPES_0_" nullable="true" originalDbColumnName="NVL(NO_OF_TAX_TYPES,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_B_TAX_SETTLEMENT_TOL_PCT_0_" nullable="true" originalDbColumnName="NVL(B.TAX_SETTLEMENT_TOL_PCT,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_B_FREIGHT_SETTLEMENT_TOL_PCT_0_" nullable="true" originalDbColumnName="NVL(B.FREIGHT_SETTLEMENT_TOL_PCT,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_B_ORD_SETTLEMENT_TOL_PCT_0_" nullable="true" originalDbColumnName="NVL(B.ORD_SETTLEMENT_TOL_PCT,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" key="false" length="1" name="ACTV_REC_IND" nullable="true" pattern="" precision="0" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="0" name="EFF_FM_TISTMP" nullable="true" pattern="" precision="0" sourceType="" type="id_Date"/>
+      <column comment="" key="false" length="0" name="EFF_TO_TISTMP" nullable="true" pattern="" precision="0" sourceType="" type="id_Date"/>
+    </metadata>
+  </node>
+  <node componentName="tFlowMeter" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="384" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFlowMeter_1"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tFlowMeter_1">
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_ORG_UNIT_PK_0_" nullable="true" originalDbColumnName="NVL(ORG_UNIT_PK,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_ADDRESS_PK_0_" nullable="true" originalDbColumnName="NVL(ADDRESS_PK,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_TAX_TYPE_PK_0_" nullable="true" originalDbColumnName="NVL(TAX_TYPE_PK,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_LOCALE_LKUP_PK_0_" nullable="true" originalDbColumnName="NVL(LOCALE_LKUP_PK,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_RATE_AUTHORITY_PK_0_" nullable="true" originalDbColumnName="NVL(RATE_AUTHORITY_PK,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="nvl_OBJECT_SECURITY_PK_0_" nullable="true" originalDbColumnName="nvl(OBJECT_SECURITY_PK,0)" pattern="" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="nvl_GRM_GROUP_MEMBERS_PK_0_" nullable="true" originalDbColumnName="nvl(GRM_GROUP_MEMBERS_PK,0)" pattern="" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_HRS_OF_OPER_CAL_PK_0_" nullable="true" originalDbColumnName="NVL(HRS_OF_OPER_CAL_PK,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_ORG_PASSWORD_RULES_PK_0_" nullable="true" originalDbColumnName="NVL(ORG_PASSWORD_RULES_PK,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_CURRENCY_CODE_PK_0_" nullable="true" originalDbColumnName="NVL(CURRENCY_CODE_PK,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_NO_OF_BRG_MEMBERSHIP_0_" nullable="true" originalDbColumnName="NVL(NO_OF_BRG_MEMBERSHIP,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_NO_OF_ARG_MEMBERSHIP_0_" nullable="true" originalDbColumnName="NVL(NO_OF_ARG_MEMBERSHIP,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_NO_OF_ROLES_0_" nullable="true" originalDbColumnName="NVL(NO_OF_ROLES,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_NO_OF_TAX_TYPES_0_" nullable="true" originalDbColumnName="NVL(NO_OF_TAX_TYPES,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_B_TAX_SETTLEMENT_TOL_PCT_0_" nullable="true" originalDbColumnName="NVL(B.TAX_SETTLEMENT_TOL_PCT,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_B_FREIGHT_SETTLEMENT_TOL_PCT_0_" nullable="true" originalDbColumnName="NVL(B.FREIGHT_SETTLEMENT_TOL_PCT,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_B_ORD_SETTLEMENT_TOL_PCT_0_" nullable="true" originalDbColumnName="NVL(B.ORD_SETTLEMENT_TOL_PCT,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" key="false" length="1" name="ACTV_REC_IND" nullable="true" pattern="" precision="0" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="0" name="EFF_FM_TISTMP" nullable="true" pattern="" precision="0" sourceType="" type="id_Date"/>
+      <column comment="" key="false" length="0" name="EFF_TO_TISTMP" nullable="true" pattern="" precision="0" sourceType="" type="id_Date"/>
+    </metadata>
+  </node>
+  <node componentName="tOracleInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="-32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tOracleInput_2"/>
+    <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_9OPRUA42EeKBw83zQfijuw"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tOracleConnection_1"/>
+    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_SID"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_11"/>
+    <elementParameter field="TEXT" name="RAC_URL" value="context.rpt_db_Server"/>
+    <elementParameter field="TEXT" name="HOST" value="context.rpt_db_Server"/>
+    <elementParameter field="TEXT" name="TYPE" value="ORACLE_SID"/>
+    <elementParameter field="TEXT" name="PORT" value="context.rpt_db_Port"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.rpt_db_Sid"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="context.rpt_db_Sid"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.rpt_db_Schema"/>
+    <elementParameter field="TEXT" name="USER" value="context.rpt_db_Login"/>
+    <elementParameter field="TEXT" name="PASS" value="context.rpt_db_Password"/>
+    <elementParameter field="TEXT" name="JDBC_URL" value="&quot;jdbc:oracle:oci:/@talend&quot;"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_9OPRUA42EeKBw83zQfijuw - FACT_ORG_EXTRACT"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;FACT_ORG_EXTRACT&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xD;&#xA;    FACT_ORG_EXTRACT.ORG_UNIT_PK, &#xD;&#xA;    FACT_ORG_EXTRACT.ADDRESS_PK, &#xD;&#xA;    FACT_ORG_EXTRACT.TAX_TYPE_PK, &#xD;&#xA;    FACT_ORG_EXTRACT.LOCALE_LKUP_PK, &#xD;&#xA;    FACT_ORG_EXTRACT.RATE_AUTHORITY_PK, &#xD;&#xA;    FACT_ORG_EXTRACT.OBJECT_SECURITY_PK, &#xD;&#xA;    FACT_ORG_EXTRACT.GRM_GROUP_MEMBERS_PK, &#xD;&#xA;    FACT_ORG_EXTRACT.HRS_OF_OPER_CAL_PK, &#xD;&#xA;    FACT_ORG_EXTRACT.ORG_PASSWORD_RULES_PK, &#xD;&#xA;    FACT_ORG_EXTRACT.NO_OF_BRG_MEMBERSHIP, &#xD;&#xA;    FACT_ORG_EXTRACT.NO_OF_ARG_MEMBERSHIP, &#xD;&#xA;    FACT_ORG_EXTRACT.NO_OF_ROLES, &#xD;&#xA;    FACT_ORG_EXTRACT.NO_OF_TAX_TYPES, &#xD;&#xA;    FACT_ORG_EXTRACT.TAX_TOLERANCE, &#xD;&#xA;    FACT_ORG_EXTRACT.DELIVERY_TOLERANCE, &#xD;&#xA;    FACT_ORG_EXTRACT.ORDER_TOLERANCE, &#xD;&#xA;    FACT_ORG_EXTRACT.ACTV_REC_IND, &#xD;&#xA;    FACT_ORG_EXTRACT.EFF_FM_TISTMP, &#xD;&#xA;    FACT_ORG_EXTRACT.EFF_TO_TISTMP&#xD;&#xA;FROM FACT_ORG_EXTRACT&#xD;&#xA;where ACTV_REC_IND='Y'&#xD;&#xA;&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="oracle_id"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="context.rpt_db_AdditionalParams"/>
+    <elementParameter field="LABEL" name="NOTE" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;"/>
+    <elementParameter field="CHECK" name="IS_CONVERT_XMLTYPE" value="false"/>
+    <elementParameter field="TABLE" name="CONVERT_XMLTYPE"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_CURSOR" value="false"/>
+    <elementParameter field="TEXT" name="CURSOR_SIZE" value="1000"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="ORG_UNIT_PK"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ADDRESS_PK"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TAX_TYPE_PK"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LOCALE_LKUP_PK"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="RATE_AUTHORITY_PK"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="OBJECT_SECURITY_PK"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="GRM_GROUP_MEMBERS_PK"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="HRS_OF_OPER_CAL_PK"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ORG_PASSWORD_RULES_PK"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="NO_OF_BRG_MEMBERSHIP"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="NO_OF_ARG_MEMBERSHIP"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="NO_OF_ROLES"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="NO_OF_TAX_TYPES"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TAX_TOLERANCE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DELIVERY_TOLERANCE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ORDER_TOLERANCE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ACTV_REC_IND"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="EFF_FM_TISTMP"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="EFF_TO_TISTMP"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="NO_NULL_VALUES" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" label="FACT_ORG_EXTRACT" name="tOracleInput_2">
+      <column comment="" key="true" length="22" name="ORG_UNIT_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="true" length="22" name="ADDRESS_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="true" length="22" name="TAX_TYPE_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="true" length="22" name="LOCALE_LKUP_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="true" length="22" name="RATE_AUTHORITY_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="true" length="22" name="OBJECT_SECURITY_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="true" length="22" name="GRM_GROUP_MEMBERS_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="true" length="22" name="HRS_OF_OPER_CAL_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="true" length="22" name="ORG_PASSWORD_RULES_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="false" length="22" name="NO_OF_BRG_MEMBERSHIP" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="false" length="22" name="NO_OF_ARG_MEMBERSHIP" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="false" length="22" name="NO_OF_ROLES" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="false" length="22" name="NO_OF_TAX_TYPES" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="false" length="10" name="TAX_TOLERANCE" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="false" length="10" name="DELIVERY_TOLERANCE" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="false" length="10" name="ORDER_TOLERANCE" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="false" length="1" name="ACTV_REC_IND" nullable="false" pattern="" precision="0" sourceType="CHAR" type="id_String"/>
+      <column comment="" key="false" length="11" name="EFF_FM_TISTMP" nullable="false" pattern="" precision="0" sourceType="TIMESTAMP(6)" type="id_String"/>
+      <column comment="" key="false" length="11" name="EFF_TO_TISTMP" nullable="false" pattern="" precision="0" sourceType="TIMESTAMP(6)" type="id_String"/>
+    </metadata>
+  </node>
+  <node componentName="tFlowMeter" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="576" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFlowMeter_2"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" label="FACT_ORG_EXTRACT" name="tFlowMeter_2">
+      <column comment="" key="true" length="22" name="ORG_UNIT_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="true" length="22" name="ADDRESS_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="true" length="22" name="TAX_TYPE_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="true" length="22" name="LOCALE_LKUP_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="true" length="22" name="RATE_AUTHORITY_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="true" length="22" name="OBJECT_SECURITY_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="true" length="22" name="GRM_GROUP_MEMBERS_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="true" length="22" name="HRS_OF_OPER_CAL_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="true" length="22" name="ORG_PASSWORD_RULES_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="false" length="22" name="NO_OF_BRG_MEMBERSHIP" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="false" length="22" name="NO_OF_ARG_MEMBERSHIP" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="false" length="22" name="NO_OF_ROLES" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="false" length="22" name="NO_OF_TAX_TYPES" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="false" length="10" name="TAX_TOLERANCE" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="false" length="10" name="DELIVERY_TOLERANCE" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="false" length="10" name="ORDER_TOLERANCE" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="false" length="1" name="ACTV_REC_IND" nullable="false" pattern="" precision="0" sourceType="CHAR" type="id_String"/>
+      <column comment="" key="false" length="11" name="EFF_FM_TISTMP" nullable="false" pattern="" precision="0" sourceType="TIMESTAMP(6)" type="id_String"/>
+      <column comment="" key="false" length="11" name="EFF_TO_TISTMP" nullable="false" pattern="" precision="0" sourceType="TIMESTAMP(6)" type="id_String"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="576" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1"/>
+    <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_eQ15cE7LEeKGQP-frlIAQg-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" label="insert" name="update">
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_ORG_UNIT_PK_0_" nullable="true" originalDbColumnName="NVL(ORG_UNIT_PK,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_ADDRESS_PK_0_" nullable="true" originalDbColumnName="NVL(ADDRESS_PK,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_TAX_TYPE_PK_0_" nullable="true" originalDbColumnName="NVL(TAX_TYPE_PK,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_LOCALE_LKUP_PK_0_" nullable="true" originalDbColumnName="NVL(LOCALE_LKUP_PK,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_RATE_AUTHORITY_PK_0_" nullable="true" originalDbColumnName="NVL(RATE_AUTHORITY_PK,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="nvl_OBJECT_SECURITY_PK_0_" nullable="true" originalDbColumnName="nvl(OBJECT_SECURITY_PK,0)" pattern="" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="nvl_GRM_GROUP_MEMBERS_PK_0_" nullable="true" originalDbColumnName="nvl(GRM_GROUP_MEMBERS_PK,0)" pattern="" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_HRS_OF_OPER_CAL_PK_0_" nullable="true" originalDbColumnName="NVL(HRS_OF_OPER_CAL_PK,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_ORG_PASSWORD_RULES_PK_0_" nullable="true" originalDbColumnName="NVL(ORG_PASSWORD_RULES_PK,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_CURRENCY_CODE_PK_0_" nullable="true" originalDbColumnName="NVL(CURRENCY_CODE_PK,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_NO_OF_BRG_MEMBERSHIP_0_" nullable="true" originalDbColumnName="NVL(NO_OF_BRG_MEMBERSHIP,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_NO_OF_ARG_MEMBERSHIP_0_" nullable="true" originalDbColumnName="NVL(NO_OF_ARG_MEMBERSHIP,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_NO_OF_ROLES_0_" nullable="true" originalDbColumnName="NVL(NO_OF_ROLES,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_NO_OF_TAX_TYPES_0_" nullable="true" originalDbColumnName="NVL(NO_OF_TAX_TYPES,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_B_TAX_SETTLEMENT_TOL_PCT_0_" nullable="true" originalDbColumnName="NVL(B.TAX_SETTLEMENT_TOL_PCT,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_B_FREIGHT_SETTLEMENT_TOL_PCT_0_" nullable="true" originalDbColumnName="NVL(B.FREIGHT_SETTLEMENT_TOL_PCT,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" defaultValue="" key="false" length="0" name="NVL_B_ORD_SETTLEMENT_TOL_PCT_0_" nullable="true" originalDbColumnName="NVL(B.ORD_SETTLEMENT_TOL_PCT,0)" pattern="" precision="0" sourceType="" type="id_BigDecimal"/>
+      <column comment="" key="false" length="1" name="ACTV_REC_IND" nullable="true" pattern="" precision="0" sourceType="" type="id_String"/>
+      <column comment="" key="false" length="0" name="EFF_FM_TISTMP" nullable="true" pattern="" precision="0" sourceType="" type="id_Date"/>
+      <column comment="" key="false" length="0" name="EFF_TO_TISTMP" nullable="true" pattern="" precision="0" sourceType="" type="id_Date"/>
+    </metadata>
+    <nodeData xsi:type="MapperData">
+      <uiProperties shellMaximized="true"/>
+      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
+      <outputTables sizeState="INTERMEDIATE" name="update">
+        <mapperTableEntries name="NVL_ORG_UNIT_PK_0_" expression="row2.NVL_ORG_UNIT_PK_0_ " type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NVL_ADDRESS_PK_0_" expression="row2.NVL_ADDRESS_PK_0_ " type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NVL_TAX_TYPE_PK_0_" expression="row2.NVL_TAX_TYPE_PK_0_ " type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NVL_LOCALE_LKUP_PK_0_" expression="row2.NVL_LOCALE_LKUP_PK_0_ " type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NVL_RATE_AUTHORITY_PK_0_" expression="row2.NVL_RATE_AUTHORITY_PK_0_ " type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="nvl_OBJECT_SECURITY_PK_0_" expression="row2.nvl_OBJECT_SECURITY_PK_0_ " type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="nvl_GRM_GROUP_MEMBERS_PK_0_" expression="row2.nvl_GRM_GROUP_MEMBERS_PK_0_ " type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NVL_HRS_OF_OPER_CAL_PK_0_" expression="row2.NVL_HRS_OF_OPER_CAL_PK_0_ " type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NVL_ORG_PASSWORD_RULES_PK_0_" expression="row2.NVL_ORG_PASSWORD_RULES_PK_0_ " type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NVL_CURRENCY_CODE_PK_0_" expression="row2.NVL_CURRENCY_CODE_PK_0_ " type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NVL_NO_OF_BRG_MEMBERSHIP_0_" expression="row2.NVL_NO_OF_BRG_MEMBERSHIP_0_ " type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NVL_NO_OF_ARG_MEMBERSHIP_0_" expression="row2.NVL_NO_OF_ARG_MEMBERSHIP_0_ " type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NVL_NO_OF_ROLES_0_" expression="row2.NVL_NO_OF_ROLES_0_ " type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NVL_NO_OF_TAX_TYPES_0_" expression="row2.NVL_NO_OF_TAX_TYPES_0_ " type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NVL_B_TAX_SETTLEMENT_TOL_PCT_0_" expression="row2.NVL_B_TAX_SETTLEMENT_TOL_PCT_0_ " type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NVL_B_FREIGHT_SETTLEMENT_TOL_PCT_0_" expression="row2.NVL_B_FREIGHT_SETTLEMENT_TOL_PCT_0_ " type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NVL_B_ORD_SETTLEMENT_TOL_PCT_0_" expression="row2.NVL_B_ORD_SETTLEMENT_TOL_PCT_0_ " type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="ACTV_REC_IND" expression="row2.ACTV_REC_IND " type="id_String" nullable="true"/>
+        <mapperTableEntries name="EFF_FM_TISTMP" expression="row2.EFF_FM_TISTMP " type="id_Date" nullable="true"/>
+        <mapperTableEntries name="EFF_TO_TISTMP" expression="row2.EFF_TO_TISTMP " type="id_Date" nullable="true"/>
+      </outputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row2" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="NVL_ORG_UNIT_PK_0_" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NVL_ADDRESS_PK_0_" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NVL_TAX_TYPE_PK_0_" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NVL_LOCALE_LKUP_PK_0_" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NVL_RATE_AUTHORITY_PK_0_" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="nvl_OBJECT_SECURITY_PK_0_" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="nvl_GRM_GROUP_MEMBERS_PK_0_" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NVL_HRS_OF_OPER_CAL_PK_0_" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NVL_ORG_PASSWORD_RULES_PK_0_" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NVL_CURRENCY_CODE_PK_0_" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NVL_NO_OF_BRG_MEMBERSHIP_0_" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NVL_NO_OF_ARG_MEMBERSHIP_0_" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NVL_NO_OF_ROLES_0_" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NVL_NO_OF_TAX_TYPES_0_" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NVL_B_TAX_SETTLEMENT_TOL_PCT_0_" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NVL_B_FREIGHT_SETTLEMENT_TOL_PCT_0_" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NVL_B_ORD_SETTLEMENT_TOL_PCT_0_" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="ACTV_REC_IND" type="id_String" nullable="true"/>
+        <mapperTableEntries name="EFF_FM_TISTMP" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="EFF_TO_TISTMP" type="id_Date" nullable="true"/>
+      </inputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row4" activateCondensedTool="true" matchingMode="ALL_MATCHES" lookupMode="LOAD_ONCE" innerJoin="true">
+        <mapperTableEntries name="ORG_UNIT_PK" expression="row2.NVL_ORG_UNIT_PK_0_ " type="id_BigDecimal" operator=""/>
+        <mapperTableEntries name="ADDRESS_PK" type="id_BigDecimal"/>
+        <mapperTableEntries name="TAX_TYPE_PK" type="id_BigDecimal"/>
+        <mapperTableEntries name="LOCALE_LKUP_PK" type="id_BigDecimal"/>
+        <mapperTableEntries name="RATE_AUTHORITY_PK" type="id_BigDecimal"/>
+        <mapperTableEntries name="OBJECT_SECURITY_PK" type="id_BigDecimal"/>
+        <mapperTableEntries name="GRM_GROUP_MEMBERS_PK" type="id_BigDecimal"/>
+        <mapperTableEntries name="HRS_OF_OPER_CAL_PK" type="id_BigDecimal"/>
+        <mapperTableEntries name="ORG_PASSWORD_RULES_PK" type="id_BigDecimal"/>
+        <mapperTableEntries name="NO_OF_BRG_MEMBERSHIP" expression="" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NO_OF_ARG_MEMBERSHIP" expression="" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NO_OF_ROLES" expression="" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NO_OF_TAX_TYPES" expression="" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="TAX_TOLERANCE" expression="" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="DELIVERY_TOLERANCE" expression="" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="ORDER_TOLERANCE" expression="" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="ACTV_REC_IND" expression="row2.ACTV_REC_IND" type="id_String" operator=""/>
+        <mapperTableEntries name="EFF_FM_TISTMP" type="id_String"/>
+        <mapperTableEntries name="EFF_TO_TISTMP" type="id_String"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="736" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_2"/>
+    <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_eQ15cE7LEeKGQP-frlIAQg-tMap_2-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" label="FACT_ORG_EXTRACT" name="insert_new">
+      <column comment="" key="true" length="22" name="ORG_UNIT_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="true" length="22" name="ADDRESS_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="true" length="22" name="TAX_TYPE_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="true" length="22" name="LOCALE_LKUP_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="true" length="22" name="RATE_AUTHORITY_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="true" length="22" name="OBJECT_SECURITY_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="true" length="22" name="GRM_GROUP_MEMBERS_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="true" length="22" name="HRS_OF_OPER_CAL_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="true" length="22" name="ORG_PASSWORD_RULES_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="false" length="22" name="NO_OF_BRG_MEMBERSHIP" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="false" length="22" name="NO_OF_ARG_MEMBERSHIP" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="false" length="22" name="NO_OF_ROLES" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="false" length="22" name="NO_OF_TAX_TYPES" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="false" length="10" name="TAX_TOLERANCE" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="false" length="10" name="DELIVERY_TOLERANCE" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="false" length="10" name="ORDER_TOLERANCE" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="false" length="1" name="ACTV_REC_IND" nullable="false" pattern="" precision="0" sourceType="CHAR" type="id_String"/>
+      <column comment="" key="false" length="11" name="EFF_FM_TISTMP" nullable="false" pattern="" precision="0" sourceType="TIMESTAMP(6)" type="id_String"/>
+      <column comment="" key="false" length="11" name="EFF_TO_TISTMP" nullable="false" pattern="" precision="0" sourceType="TIMESTAMP(6)" type="id_String"/>
+    </metadata>
+    <nodeData xsi:type="MapperData">
+      <uiProperties shellMaximized="true"/>
+      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
+      <outputTables sizeState="INTERMEDIATE" name="insert_new">
+        <mapperTableEntries name="ORG_UNIT_PK" expression="update.NVL_ORG_UNIT_PK_0_ " type="id_BigDecimal"/>
+        <mapperTableEntries name="ADDRESS_PK" expression="" type="id_BigDecimal"/>
+        <mapperTableEntries name="TAX_TYPE_PK" expression="" type="id_BigDecimal"/>
+        <mapperTableEntries name="LOCALE_LKUP_PK" expression="" type="id_BigDecimal"/>
+        <mapperTableEntries name="RATE_AUTHORITY_PK" expression="" type="id_BigDecimal"/>
+        <mapperTableEntries name="OBJECT_SECURITY_PK" expression="" type="id_BigDecimal"/>
+        <mapperTableEntries name="GRM_GROUP_MEMBERS_PK" expression="" type="id_BigDecimal"/>
+        <mapperTableEntries name="HRS_OF_OPER_CAL_PK" expression="" type="id_BigDecimal"/>
+        <mapperTableEntries name="ORG_PASSWORD_RULES_PK" expression="" type="id_BigDecimal"/>
+        <mapperTableEntries name="NO_OF_BRG_MEMBERSHIP" expression="" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NO_OF_ARG_MEMBERSHIP" expression="" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NO_OF_ROLES" expression="" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NO_OF_TAX_TYPES" expression="" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="TAX_TOLERANCE" expression="" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="DELIVERY_TOLERANCE" expression="" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="ORDER_TOLERANCE" expression="" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="ACTV_REC_IND" expression="&quot;N&quot;" type="id_String"/>
+        <mapperTableEntries name="EFF_FM_TISTMP" expression="context.load_from" type="id_String"/>
+        <mapperTableEntries name="EFF_TO_TISTMP" expression="context.load_to" type="id_String"/>
+      </outputTables>
+      <inputTables sizeState="INTERMEDIATE" name="update" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="NVL_ORG_UNIT_PK_0_" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NVL_ADDRESS_PK_0_" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NVL_TAX_TYPE_PK_0_" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NVL_LOCALE_LKUP_PK_0_" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NVL_RATE_AUTHORITY_PK_0_" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="nvl_OBJECT_SECURITY_PK_0_" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="nvl_GRM_GROUP_MEMBERS_PK_0_" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NVL_HRS_OF_OPER_CAL_PK_0_" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NVL_ORG_PASSWORD_RULES_PK_0_" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NVL_CURRENCY_CODE_PK_0_" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NVL_NO_OF_BRG_MEMBERSHIP_0_" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NVL_NO_OF_ARG_MEMBERSHIP_0_" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NVL_NO_OF_ROLES_0_" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NVL_NO_OF_TAX_TYPES_0_" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NVL_B_TAX_SETTLEMENT_TOL_PCT_0_" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NVL_B_FREIGHT_SETTLEMENT_TOL_PCT_0_" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="NVL_B_ORD_SETTLEMENT_TOL_PCT_0_" type="id_BigDecimal" nullable="true"/>
+        <mapperTableEntries name="ACTV_REC_IND" type="id_String" nullable="true"/>
+        <mapperTableEntries name="EFF_FM_TISTMP" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="EFF_TO_TISTMP" type="id_Date" nullable="true"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tOracleOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="864" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tOracleOutput_1"/>
+    <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_9OPRUA42EeKBw83zQfijuw"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tOracleConnection_1"/>
+    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_SID"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_11"/>
+    <elementParameter field="TEXT" name="RAC_URL" value="context.rpt_db_Server"/>
+    <elementParameter field="TEXT" name="HOST" value="context.rpt_db_Server"/>
+    <elementParameter field="TEXT" name="PORT" value="context.rpt_db_Port"/>
+    <elementParameter field="TEXT" name="TYPE" value="ORACLE_SID"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.rpt_db_Sid"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="context.rpt_db_Sid"/>
+    <elementParameter field="TEXT" name="TABLESCHEMA" value="context.rpt_db_Schema"/>
+    <elementParameter field="TEXT" name="USER" value="context.rpt_db_Login"/>
+    <elementParameter field="TEXT" name="PASS" value="context.rpt_db_Password"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;FACT_ORG_EXTRACT&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
+    <elementParameter field="LABEL" name="NOTE" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="UPDATE"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA_FLOW:SCHEMA_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA_FLOW:REPOSITORY_SCHEMA_TYPE" value="_9OPRUA42EeKBw83zQfijuw - FACT_ORG_EXTRACT"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="oracle_id"/>
+    <elementParameter field="TEXT" name="JDBC_URL" value="&quot;jdbc:oracle:oci:/@talend&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="context.rpt_db_AdditionalParams"/>
+    <elementParameter field="LABEL" name="NOTE" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TABLE" name="ADD_COLS"/>
+    <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="true"/>
+    <elementParameter field="TABLE" name="FIELD_OPTIONS">
+      <elementValue elementRef="SCHEMA_COLUMN" value="ORG_UNIT_PK"/>
+      <elementValue elementRef="UPDATE_KEY" value="true"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="false"/>
+      <elementValue elementRef="INSERTABLE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ADDRESS_PK"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="false"/>
+      <elementValue elementRef="INSERTABLE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TAX_TYPE_PK"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="false"/>
+      <elementValue elementRef="INSERTABLE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LOCALE_LKUP_PK"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="false"/>
+      <elementValue elementRef="INSERTABLE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="RATE_AUTHORITY_PK"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="false"/>
+      <elementValue elementRef="INSERTABLE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="OBJECT_SECURITY_PK"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="false"/>
+      <elementValue elementRef="INSERTABLE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="GRM_GROUP_MEMBERS_PK"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="false"/>
+      <elementValue elementRef="INSERTABLE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="HRS_OF_OPER_CAL_PK"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="false"/>
+      <elementValue elementRef="INSERTABLE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ORG_PASSWORD_RULES_PK"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="false"/>
+      <elementValue elementRef="INSERTABLE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="NO_OF_BRG_MEMBERSHIP"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="false"/>
+      <elementValue elementRef="INSERTABLE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="NO_OF_ARG_MEMBERSHIP"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="false"/>
+      <elementValue elementRef="INSERTABLE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="NO_OF_ROLES"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="false"/>
+      <elementValue elementRef="INSERTABLE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="NO_OF_TAX_TYPES"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="false"/>
+      <elementValue elementRef="INSERTABLE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TAX_TOLERANCE"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="false"/>
+      <elementValue elementRef="INSERTABLE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DELIVERY_TOLERANCE"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="false"/>
+      <elementValue elementRef="INSERTABLE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ORDER_TOLERANCE"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="false"/>
+      <elementValue elementRef="INSERTABLE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ACTV_REC_IND"/>
+      <elementValue elementRef="UPDATE_KEY" value="true"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="EFF_FM_TISTMP"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="false"/>
+      <elementValue elementRef="INSERTABLE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="EFF_TO_TISTMP"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="false"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="USE_HINT_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="HINT_OPTIONS"/>
+    <elementParameter field="CHECK" name="CONVERT_COLUMN_TABLE_TO_UPPERCASE" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
+    <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
+    <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
+    <elementParameter field="CHECK" name="USE_TIMESTAMP_FOR_DATE_TYPE" value="true"/>
+    <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" label="FACT_ORG_EXTRACT" name="tOracleOutput_1">
+      <column comment="" key="true" length="22" name="ORG_UNIT_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="true" length="22" name="ADDRESS_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="true" length="22" name="TAX_TYPE_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="true" length="22" name="LOCALE_LKUP_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="true" length="22" name="RATE_AUTHORITY_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="true" length="22" name="OBJECT_SECURITY_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="true" length="22" name="GRM_GROUP_MEMBERS_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="true" length="22" name="HRS_OF_OPER_CAL_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="true" length="22" name="ORG_PASSWORD_RULES_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="false" length="22" name="NO_OF_BRG_MEMBERSHIP" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="false" length="22" name="NO_OF_ARG_MEMBERSHIP" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="false" length="22" name="NO_OF_ROLES" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="false" length="22" name="NO_OF_TAX_TYPES" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="false" length="10" name="TAX_TOLERANCE" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="false" length="10" name="DELIVERY_TOLERANCE" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="false" length="10" name="ORDER_TOLERANCE" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="false" length="1" name="ACTV_REC_IND" nullable="false" pattern="" precision="0" sourceType="CHAR" type="id_String"/>
+      <column comment="" key="false" length="11" name="EFF_FM_TISTMP" nullable="false" pattern="" precision="0" sourceType="TIMESTAMP(6)" type="id_String"/>
+      <column comment="" key="false" length="11" name="EFF_TO_TISTMP" nullable="false" pattern="" precision="0" sourceType="TIMESTAMP(6)" type="id_String"/>
+    </metadata>
+    <metadata connector="REJECT" label="FACT_ORG_EXTRACT" name="REJECT">
+      <column comment="" key="true" length="22" name="ORG_UNIT_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="true" length="22" name="ADDRESS_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="true" length="22" name="TAX_TYPE_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="true" length="22" name="LOCALE_LKUP_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="true" length="22" name="RATE_AUTHORITY_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="true" length="22" name="OBJECT_SECURITY_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="true" length="22" name="GRM_GROUP_MEMBERS_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="true" length="22" name="HRS_OF_OPER_CAL_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="true" length="22" name="ORG_PASSWORD_RULES_PK" nullable="false" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="false" length="22" name="NO_OF_BRG_MEMBERSHIP" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="false" length="22" name="NO_OF_ARG_MEMBERSHIP" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="false" length="22" name="NO_OF_ROLES" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="false" length="22" name="NO_OF_TAX_TYPES" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="false" length="10" name="TAX_TOLERANCE" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="false" length="10" name="DELIVERY_TOLERANCE" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="false" length="10" name="ORDER_TOLERANCE" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal"/>
+      <column comment="" key="false" length="1" name="ACTV_REC_IND" nullable="false" pattern="" precision="0" sourceType="CHAR" type="id_String"/>
+      <column comment="" key="false" length="11" name="EFF_FM_TISTMP" nullable="false" pattern="" precision="0" sourceType="TIMESTAMP(6)" type="id_String"/>
+      <column comment="" key="false" length="11" name="EFF_TO_TISTMP" nullable="false" pattern="" precision="0" sourceType="TIMESTAMP(6)" type="id_String"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String"/>
+    </metadata>
+  </node>
+  <node componentName="tOracleCommit" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tOracleCommit_1"/>
+    <elementParameter field="CHECK" name="TSTATCATCHER_STATS" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tOracleConnection_1"/>
+    <elementParameter field="CHECK" name="CLOSE" value="true"/>
+    <elementParameter field="TEXT" name="LABEL" value="commit_rpt_db"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tOracleCommit_1"/>
+  </node>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tOracleConnection_1" offsetLabelX="0" offsetLabelY="0" source="tOracleConnection_1" target="tOracleInput_1">
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1"/>
+  </connection>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tOracleInput_1" offsetLabelX="0" offsetLabelY="0" source="tOracleInput_1" target="tFlowMeter_1">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_ORG_UNIT_PK_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_ADDRESS_PK_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_TAX_TYPE_PK_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_LOCALE_LKUP_PK_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_RATE_AUTHORITY_PK_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="nvl_OBJECT_SECURITY_PK_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="nvl_GRM_GROUP_MEMBERS_PK_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_HRS_OF_OPER_CAL_PK_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_ORG_PASSWORD_RULES_PK_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_CURRENCY_CODE_PK_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_NO_OF_BRG_MEMBERSHIP_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_NO_OF_ARG_MEMBERSHIP_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_NO_OF_ROLES_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_NO_OF_TAX_TYPES_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_B_TAX_SETTLEMENT_TOL_PCT_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_B_FREIGHT_SETTLEMENT_TOL_PCT_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_B_ORD_SETTLEMENT_TOL_PCT_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ACTV_REC_IND"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="EFF_FM_TISTMP"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="EFF_TO_TISTMP"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tOracleInput_1" offsetLabelX="0" offsetLabelY="0" source="tOracleInput_1" target="tOracleCommit_1">
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk2"/>
+  </connection>
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tFlowMeter_1" offsetLabelX="0" offsetLabelY="0" source="tFlowMeter_1" target="tMap_1">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_ORG_UNIT_PK_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_ADDRESS_PK_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_TAX_TYPE_PK_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_LOCALE_LKUP_PK_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_RATE_AUTHORITY_PK_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="nvl_OBJECT_SECURITY_PK_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="nvl_GRM_GROUP_MEMBERS_PK_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_HRS_OF_OPER_CAL_PK_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_ORG_PASSWORD_RULES_PK_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_CURRENCY_CODE_PK_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_NO_OF_BRG_MEMBERSHIP_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_NO_OF_ARG_MEMBERSHIP_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_NO_OF_ROLES_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_NO_OF_TAX_TYPES_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_B_TAX_SETTLEMENT_TOL_PCT_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_B_FREIGHT_SETTLEMENT_TOL_PCT_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_B_ORD_SETTLEMENT_TOL_PCT_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ACTV_REC_IND"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="EFF_FM_TISTMP"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="EFF_TO_TISTMP"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2"/>
+  </connection>
+  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tOracleInput_2" offsetLabelX="0" offsetLabelY="0" source="tOracleInput_2" target="tFlowMeter_2">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="ORG_UNIT_PK"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ADDRESS_PK"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="TAX_TYPE_PK"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="LOCALE_LKUP_PK"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="RATE_AUTHORITY_PK"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="OBJECT_SECURITY_PK"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="GRM_GROUP_MEMBERS_PK"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="HRS_OF_OPER_CAL_PK"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ORG_PASSWORD_RULES_PK"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NO_OF_BRG_MEMBERSHIP"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NO_OF_ARG_MEMBERSHIP"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NO_OF_ROLES"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NO_OF_TAX_TYPES"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="TAX_TOLERANCE"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DELIVERY_TOLERANCE"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ORDER_TOLERANCE"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ACTV_REC_IND"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="EFF_FM_TISTMP"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="EFF_TO_TISTMP"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3"/>
+  </connection>
+  <connection connectorName="FLOW" label="row4" lineStyle="8" metaname="tFlowMeter_2" offsetLabelX="0" offsetLabelY="0" source="tFlowMeter_2" target="tMap_1">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="ORG_UNIT_PK"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ADDRESS_PK"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="TAX_TYPE_PK"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="LOCALE_LKUP_PK"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="RATE_AUTHORITY_PK"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="OBJECT_SECURITY_PK"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="GRM_GROUP_MEMBERS_PK"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="HRS_OF_OPER_CAL_PK"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ORG_PASSWORD_RULES_PK"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NO_OF_BRG_MEMBERSHIP"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NO_OF_ARG_MEMBERSHIP"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NO_OF_ROLES"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NO_OF_TAX_TYPES"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="TAX_TOLERANCE"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DELIVERY_TOLERANCE"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ORDER_TOLERANCE"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ACTV_REC_IND"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="EFF_FM_TISTMP"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="EFF_TO_TISTMP"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row4"/>
+  </connection>
+  <connection connectorName="FLOW" label="update" lineStyle="0" metaname="update" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tMap_2">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_ORG_UNIT_PK_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_ADDRESS_PK_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_TAX_TYPE_PK_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_LOCALE_LKUP_PK_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_RATE_AUTHORITY_PK_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="nvl_OBJECT_SECURITY_PK_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="nvl_GRM_GROUP_MEMBERS_PK_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_HRS_OF_OPER_CAL_PK_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_ORG_PASSWORD_RULES_PK_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_CURRENCY_CODE_PK_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_NO_OF_BRG_MEMBERSHIP_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_NO_OF_ARG_MEMBERSHIP_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_NO_OF_ROLES_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_NO_OF_TAX_TYPES_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_B_TAX_SETTLEMENT_TOL_PCT_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_B_FREIGHT_SETTLEMENT_TOL_PCT_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NVL_B_ORD_SETTLEMENT_TOL_PCT_0_"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ACTV_REC_IND"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="EFF_FM_TISTMP"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="EFF_TO_TISTMP"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="update"/>
+  </connection>
+  <connection connectorName="FLOW" label="insert_new" lineStyle="0" metaname="insert_new" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tOracleOutput_1">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="ORG_UNIT_PK"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ADDRESS_PK"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="TAX_TYPE_PK"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="LOCALE_LKUP_PK"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="RATE_AUTHORITY_PK"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="OBJECT_SECURITY_PK"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="GRM_GROUP_MEMBERS_PK"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="HRS_OF_OPER_CAL_PK"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ORG_PASSWORD_RULES_PK"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NO_OF_BRG_MEMBERSHIP"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NO_OF_ARG_MEMBERSHIP"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NO_OF_ROLES"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NO_OF_TAX_TYPES"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="TAX_TOLERANCE"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="DELIVERY_TOLERANCE"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ORDER_TOLERANCE"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ACTV_REC_IND"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="EFF_FM_TISTMP"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="EFF_TO_TISTMP"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="insert_new"/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tOracleConnection_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tOracleInput_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tOracleCommit_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+</talendfile:ProcessType>

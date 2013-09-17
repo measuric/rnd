@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:DelimitedFileConnection xmi:id="_oXh_wFXVEeKJlrRP4iOtVw" name="AdGroupReport" dataPackage="_oXh_wVXVEeKJlrRP4iOtVw" Server="Localhost 127.0.0.1" FilePath="E:/Dheeraj/CLIK LAB/sample data/Ad group report.csv" Encoding="UTF-16LE" FieldSeparatorValue="&quot;\t&quot;" RowSeparatorValue="&quot;\n&quot;" UseHeader="true" HeaderValue="2" UseFooter="true" FooterValue="4" LimitValue="" FirstLineCaption="true" EscapeChar="&quot;&quot;&quot;" TextEnclosure="&quot;&quot;&quot;" FieldSeparatorType="Tabulation"/>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_oXh_wVXVEeKJlrRP4iOtVw" name="default" dataManager="_oXh_wFXVEeKJlrRP4iOtVw">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_oXh_wlXVEeKJlrRP4iOtVw" id="__nVjsFXUEeKJlrRP4iOtVw" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oXh_w1XVEeKJlrRP4iOtVw" label="Day" length="10" talendType="id_Date" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oXh_xFXVEeKJlrRP4iOtVw" label="State" length="7" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oXh_xVXVEeKJlrRP4iOtVw" label="Ad_group" length="9" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oXh_xlXVEeKJlrRP4iOtVw" label="Status" length="8" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oXh_x1XVEeKJlrRP4iOtVw" label="Max__CPA__1_per_click_" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oXh_yFXVEeKJlrRP4iOtVw" label="Clicks" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oXh_yVXVEeKJlrRP4iOtVw" label="Impressions" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oXh_ylXVEeKJlrRP4iOtVw" label="CTR" length="7" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oXh_y1XVEeKJlrRP4iOtVw" label="Avg__CPC" length="4" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oXh_zFXVEeKJlrRP4iOtVw" label="Cost" length="5" precision="4" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oXh_zVXVEeKJlrRP4iOtVw" label="Avg__position" length="4" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oXh_zlXVEeKJlrRP4iOtVw" label="Conv___1_per_click_" length="1" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oXh_z1XVEeKJlrRP4iOtVw" label="Cost___conv___1_per_click_" length="5" precision="4" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oXh_0FXVEeKJlrRP4iOtVw" label="Conv__rate__1_per_click_" length="5" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oXh_0VXVEeKJlrRP4iOtVw" label="View_through_conv_" length="1" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oXh_0lXVEeKJlrRP4iOtVw" label="Avg__CPM" length="6" precision="4" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oXh_01XVEeKJlrRP4iOtVw" label="Total_cost" length="5" precision="4" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oXh_1FXVEeKJlrRP4iOtVw" label="Conv___many_per_click_" length="1" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oXh_1VXVEeKJlrRP4iOtVw" label="Cost___conv___many_per_click_" length="5" precision="4" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oXh_1lXVEeKJlrRP4iOtVw" label="Conv__rate__many_per_click_" length="5" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oXh_11XVEeKJlrRP4iOtVw" label="Total_conv__value" length="10" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oXh_2FXVEeKJlrRP4iOtVw" label="Conv__value___cost" length="6" precision="5" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oXh_2VXVEeKJlrRP4iOtVw" label="Conv__value___click" length="6" precision="5" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oXh_2lXVEeKJlrRP4iOtVw" label="Value___conv___1_per_click_" length="9" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oXh_21XVEeKJlrRP4iOtVw" label="Value___conv___many_per_click_" length="9" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oXh_3FXVEeKJlrRP4iOtVw" label="Phone_impressions" length="1" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oXh_3VXVEeKJlrRP4iOtVw" label="Phone_calls" length="1" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oXh_3lXVEeKJlrRP4iOtVw" label="PTR" length="5" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oXh_31XVEeKJlrRP4iOtVw" label="Phone_cost" length="4" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oXh_4FXVEeKJlrRP4iOtVw" label="Search_Impr__share" length="7" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oXh_4VXVEeKJlrRP4iOtVw" label="Search_Exact_match_IS" length="7" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oXh_4lXVEeKJlrRP4iOtVw" label="Search_Lost_IS__rank_" length="5" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oXh_41XVEeKJlrRP4iOtVw" label="Content_Impr__share" length="2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oXh_5FXVEeKJlrRP4iOtVw" label="Content_Lost_IS__budget_" length="2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oXh_5VXVEeKJlrRP4iOtVw" label="Lost_IS__rank_" length="5" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oXh_5lXVEeKJlrRP4iOtVw" label="Exact_match_IS" length="7" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oXh_51XVEeKJlrRP4iOtVw" label="Relative_CTR" length="2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oXh_6FXVEeKJlrRP4iOtVw" label="Bounce_rate" length="5" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oXh_6VXVEeKJlrRP4iOtVw" label="Pages___visit" length="4" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oXh_6lXVEeKJlrRP4iOtVw" label="Avg__visit_duration__seconds_" length="1" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oXh_61XVEeKJlrRP4iOtVw" label="__new_visits" length="5" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_oXh_7FXVEeKJlrRP4iOtVw" label="Labels" length="2" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

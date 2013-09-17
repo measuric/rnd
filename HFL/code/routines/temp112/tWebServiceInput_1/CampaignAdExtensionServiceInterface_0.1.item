@@ -1,0 +1,36 @@
+/**
+ * CampaignAdExtensionServiceInterface.java
+ *
+ * This file was auto-generated from WSDL
+ * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ */
+
+package routines;
+
+public interface CampaignAdExtensionServiceInterface extends java.rmi.Remote {
+
+    /**
+     * Returns a list of {@link CampaignAdExtension}s.
+     *         
+     *         
+     * @param serviceSelector The selector specifying the {@link CampaignAdExtension}s
+     * to return.
+     *         
+     * @return The page containing the {@link CampaignAdExtension}s which
+     * meet the
+     *         criteria specified by the selector.
+     *         
+     * @throws ApiException when there is at least one error with the request.
+     */
+    public routines.CampaignAdExtensionPage get(routines.Selector serviceSelector) throws java.rmi.RemoteException, routines.ApiException;
+
+    /**
+     * Applies the list of mutate operations.
+     *         
+     * @param operations The operations to apply. The same {@link CampaignAdExtension}
+     * cannot be specified in more than one operation.
+     *         
+     * @return The changed {@link CampaignAdExtension}s.
+     */
+    public routines.CampaignAdExtensionReturnValue mutate(routines.CampaignAdExtensionOperation[] operations) throws java.rmi.RemoteException, routines.ApiException;
+}

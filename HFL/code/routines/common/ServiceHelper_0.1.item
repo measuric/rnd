@@ -1,0 +1,72 @@
+package routines;
+
+import java.io.UnsupportedEncodingException;
+import java.net.MalformedURLException;
+import java.rmi.RemoteException;
+import java.security.InvalidAlgorithmParameterException;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
+
+import javax.crypto.BadPaddingException;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
+import javax.xml.rpc.ServiceException;
+
+public class ServiceHelper {
+
+	private static Service_Service _serviceBase;
+	private static IIntegrationService _integrationService;
+	private static String _sessionId;
+	
+    public static IIntegrationService getServiceInstance(java.util.Properties props) throws ServiceException, MalformedURLException {
+        
+    	String serviceUrl = props.getProperty("dataServiceBaseUrl");
+    	String serviceName = props.getProperty("integrationServiceName");
+    	
+    	if (_serviceBase == null) _serviceBase = new Service_ServiceLocator();
+    	if (_integrationService == null) _integrationService = _serviceBase.getIntegrationService(new java.net.URL(serviceUrl + serviceName));
+    	return _integrationService;
+    }
+    
+    public static String getSessionId(java.util.Properties props) {
+    	
+    	String userName = props.getProperty("loginUserName");
+    	String password = props.getProperty("loginUserPassword");
+    	
+    	if (_sessionId == null)
+			try {
+				_sessionId = getServiceInstance(props).getSession(userName, Encryption.Encrypt(password, "s33d"));
+			} catch (InvalidKeyException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (RemoteException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (MalformedURLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (UnsupportedEncodingException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (NoSuchAlgorithmException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (NoSuchPaddingException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (InvalidAlgorithmParameterException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IllegalBlockSizeException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (BadPaddingException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (ServiceException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+    	return _sessionId;
+    }
+}

@@ -1,0 +1,175 @@
+/**
+ * BiddingTransition.java
+ *
+ * This file was auto-generated from WSDL
+ * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ */
+
+package routines;
+
+
+/**
+ * Used to switch a campaign's bidding strategy.
+ */
+public class BiddingTransition  implements java.io.Serializable {
+    /* <span class="constraint Required">This field is required and
+     * should not be {@code null}.</span> */
+    private routines.BiddingStrategy targetBiddingStrategy;
+
+    /* Indicates that this instance is a subtype of BiddingTransition.
+     * Although this field is returned in the response, it is ignored on
+     * input
+     *                 and cannot be selected. Specify xsi:type instead. */
+    private java.lang.String biddingTransitionType;
+
+    public BiddingTransition() {
+    }
+
+    public BiddingTransition(
+           routines.BiddingStrategy targetBiddingStrategy,
+           java.lang.String biddingTransitionType) {
+           this.targetBiddingStrategy = targetBiddingStrategy;
+           this.biddingTransitionType = biddingTransitionType;
+    }
+
+
+    /**
+     * Gets the targetBiddingStrategy value for this BiddingTransition.
+     * 
+     * @return targetBiddingStrategy   * <span class="constraint Required">This field is required and
+     * should not be {@code null}.</span>
+     */
+    public routines.BiddingStrategy getTargetBiddingStrategy() {
+        return targetBiddingStrategy;
+    }
+
+
+    /**
+     * Sets the targetBiddingStrategy value for this BiddingTransition.
+     * 
+     * @param targetBiddingStrategy   * <span class="constraint Required">This field is required and
+     * should not be {@code null}.</span>
+     */
+    public void setTargetBiddingStrategy(routines.BiddingStrategy targetBiddingStrategy) {
+        this.targetBiddingStrategy = targetBiddingStrategy;
+    }
+
+
+    /**
+     * Gets the biddingTransitionType value for this BiddingTransition.
+     * 
+     * @return biddingTransitionType   * Indicates that this instance is a subtype of BiddingTransition.
+     * Although this field is returned in the response, it is ignored on
+     * input
+     *                 and cannot be selected. Specify xsi:type instead.
+     */
+    public java.lang.String getBiddingTransitionType() {
+        return biddingTransitionType;
+    }
+
+
+    /**
+     * Sets the biddingTransitionType value for this BiddingTransition.
+     * 
+     * @param biddingTransitionType   * Indicates that this instance is a subtype of BiddingTransition.
+     * Although this field is returned in the response, it is ignored on
+     * input
+     *                 and cannot be selected. Specify xsi:type instead.
+     */
+    public void setBiddingTransitionType(java.lang.String biddingTransitionType) {
+        this.biddingTransitionType = biddingTransitionType;
+    }
+
+    private java.lang.Object __equalsCalc = null;
+    public synchronized boolean equals(java.lang.Object obj) {
+        if (!(obj instanceof BiddingTransition)) return false;
+        BiddingTransition other = (BiddingTransition) obj;
+        if (obj == null) return false;
+        if (this == obj) return true;
+        if (__equalsCalc != null) {
+            return (__equalsCalc == obj);
+        }
+        __equalsCalc = obj;
+        boolean _equals;
+        _equals = true && 
+            ((this.targetBiddingStrategy==null && other.getTargetBiddingStrategy()==null) || 
+             (this.targetBiddingStrategy!=null &&
+              this.targetBiddingStrategy.equals(other.getTargetBiddingStrategy()))) &&
+            ((this.biddingTransitionType==null && other.getBiddingTransitionType()==null) || 
+             (this.biddingTransitionType!=null &&
+              this.biddingTransitionType.equals(other.getBiddingTransitionType())));
+        __equalsCalc = null;
+        return _equals;
+    }
+
+    private boolean __hashCodeCalc = false;
+    public synchronized int hashCode() {
+        if (__hashCodeCalc) {
+            return 0;
+        }
+        __hashCodeCalc = true;
+        int _hashCode = 1;
+        if (getTargetBiddingStrategy() != null) {
+            _hashCode += getTargetBiddingStrategy().hashCode();
+        }
+        if (getBiddingTransitionType() != null) {
+            _hashCode += getBiddingTransitionType().hashCode();
+        }
+        __hashCodeCalc = false;
+        return _hashCode;
+    }
+
+    // Type metadata
+    private static org.apache.axis.description.TypeDesc typeDesc =
+        new org.apache.axis.description.TypeDesc(BiddingTransition.class, true);
+
+    static {
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://adwords.google.com/api/adwords/cm/v201209", "BiddingTransition"));
+        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("targetBiddingStrategy");
+        elemField.setXmlName(new javax.xml.namespace.QName("https://adwords.google.com/api/adwords/cm/v201209", "targetBiddingStrategy"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://adwords.google.com/api/adwords/cm/v201209", "BiddingStrategy"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("biddingTransitionType");
+        elemField.setXmlName(new javax.xml.namespace.QName("https://adwords.google.com/api/adwords/cm/v201209", "BiddingTransition.Type"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+    }
+
+    /**
+     * Return type metadata object
+     */
+    public static org.apache.axis.description.TypeDesc getTypeDesc() {
+        return typeDesc;
+    }
+
+    /**
+     * Get Custom Serializer
+     */
+    public static org.apache.axis.encoding.Serializer getSerializer(
+           java.lang.String mechType, 
+           java.lang.Class _javaType,  
+           javax.xml.namespace.QName _xmlType) {
+        return 
+          new  org.apache.axis.encoding.ser.BeanSerializer(
+            _javaType, _xmlType, typeDesc);
+    }
+
+    /**
+     * Get Custom Deserializer
+     */
+    public static org.apache.axis.encoding.Deserializer getDeserializer(
+           java.lang.String mechType, 
+           java.lang.Class _javaType,  
+           javax.xml.namespace.QName _xmlType) {
+        return 
+          new  org.apache.axis.encoding.ser.BeanDeserializer(
+            _javaType, _xmlType, typeDesc);
+    }
+
+}

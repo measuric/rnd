@@ -1,0 +1,198 @@
+/**
+ * ConversionOptimizer.java
+ *
+ * This file was auto-generated from WSDL
+ * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ */
+
+package routines;
+
+
+/**
+ * Conversion optimizer bidding strategy. For more information, visit
+ * the
+ *             <a href="http://www.google.com/adwords/conversionoptimizer/index.html"
+ * >Conversion Optimizer site</a>.
+ *             <span class="constraint AdxEnabled">This is disabled for
+ * AdX.</span>
+ */
+public class ConversionOptimizer  extends routines.BiddingStrategy  implements java.io.Serializable {
+    /* Pricing model for the conversion optimizer bidding strategy,
+     * Click for pay-per-click or Conversions for pay-per-conversions.
+     *                     If the pricing model is not specified  it defaults
+     * to Clicks.
+     *                     <span class="constraint Selectable">This field
+     * can be selected using the value "PricingModel".</span><span class="constraint
+     * Filterable">This field can be filtered on.</span> */
+    private routines.PricingModel pricingModel;
+
+    /* Bid type for the conversion optimizer campaign
+     *                     <span class="constraint Selectable">This field
+     * can be selected using the value "ConversionOptimizerBidType".</span><span
+     * class="constraint Filterable">This field can be filtered on.</span> */
+    private routines.ConversionOptimizerBidType conversionOptimizerBidType;
+
+    public ConversionOptimizer() {
+    }
+
+    public ConversionOptimizer(
+           java.lang.String biddingStrategyType,
+           routines.PricingModel pricingModel,
+           routines.ConversionOptimizerBidType conversionOptimizerBidType) {
+        super(
+            biddingStrategyType);
+        this.pricingModel = pricingModel;
+        this.conversionOptimizerBidType = conversionOptimizerBidType;
+    }
+
+
+    /**
+     * Gets the pricingModel value for this ConversionOptimizer.
+     * 
+     * @return pricingModel   * Pricing model for the conversion optimizer bidding strategy,
+     * Click for pay-per-click or Conversions for pay-per-conversions.
+     *                     If the pricing model is not specified  it defaults
+     * to Clicks.
+     *                     <span class="constraint Selectable">This field
+     * can be selected using the value "PricingModel".</span><span class="constraint
+     * Filterable">This field can be filtered on.</span>
+     */
+    public routines.PricingModel getPricingModel() {
+        return pricingModel;
+    }
+
+
+    /**
+     * Sets the pricingModel value for this ConversionOptimizer.
+     * 
+     * @param pricingModel   * Pricing model for the conversion optimizer bidding strategy,
+     * Click for pay-per-click or Conversions for pay-per-conversions.
+     *                     If the pricing model is not specified  it defaults
+     * to Clicks.
+     *                     <span class="constraint Selectable">This field
+     * can be selected using the value "PricingModel".</span><span class="constraint
+     * Filterable">This field can be filtered on.</span>
+     */
+    public void setPricingModel(routines.PricingModel pricingModel) {
+        this.pricingModel = pricingModel;
+    }
+
+
+    /**
+     * Gets the conversionOptimizerBidType value for this ConversionOptimizer.
+     * 
+     * @return conversionOptimizerBidType   * Bid type for the conversion optimizer campaign
+     *                     <span class="constraint Selectable">This field
+     * can be selected using the value "ConversionOptimizerBidType".</span><span
+     * class="constraint Filterable">This field can be filtered on.</span>
+     */
+    public routines.ConversionOptimizerBidType getConversionOptimizerBidType() {
+        return conversionOptimizerBidType;
+    }
+
+
+    /**
+     * Sets the conversionOptimizerBidType value for this ConversionOptimizer.
+     * 
+     * @param conversionOptimizerBidType   * Bid type for the conversion optimizer campaign
+     *                     <span class="constraint Selectable">This field
+     * can be selected using the value "ConversionOptimizerBidType".</span><span
+     * class="constraint Filterable">This field can be filtered on.</span>
+     */
+    public void setConversionOptimizerBidType(routines.ConversionOptimizerBidType conversionOptimizerBidType) {
+        this.conversionOptimizerBidType = conversionOptimizerBidType;
+    }
+
+    private java.lang.Object __equalsCalc = null;
+    public synchronized boolean equals(java.lang.Object obj) {
+        if (!(obj instanceof ConversionOptimizer)) return false;
+        ConversionOptimizer other = (ConversionOptimizer) obj;
+        if (obj == null) return false;
+        if (this == obj) return true;
+        if (__equalsCalc != null) {
+            return (__equalsCalc == obj);
+        }
+        __equalsCalc = obj;
+        boolean _equals;
+        _equals = super.equals(obj) && 
+            ((this.pricingModel==null && other.getPricingModel()==null) || 
+             (this.pricingModel!=null &&
+              this.pricingModel.equals(other.getPricingModel()))) &&
+            ((this.conversionOptimizerBidType==null && other.getConversionOptimizerBidType()==null) || 
+             (this.conversionOptimizerBidType!=null &&
+              this.conversionOptimizerBidType.equals(other.getConversionOptimizerBidType())));
+        __equalsCalc = null;
+        return _equals;
+    }
+
+    private boolean __hashCodeCalc = false;
+    public synchronized int hashCode() {
+        if (__hashCodeCalc) {
+            return 0;
+        }
+        __hashCodeCalc = true;
+        int _hashCode = super.hashCode();
+        if (getPricingModel() != null) {
+            _hashCode += getPricingModel().hashCode();
+        }
+        if (getConversionOptimizerBidType() != null) {
+            _hashCode += getConversionOptimizerBidType().hashCode();
+        }
+        __hashCodeCalc = false;
+        return _hashCode;
+    }
+
+    // Type metadata
+    private static org.apache.axis.description.TypeDesc typeDesc =
+        new org.apache.axis.description.TypeDesc(ConversionOptimizer.class, true);
+
+    static {
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://adwords.google.com/api/adwords/cm/v201209", "ConversionOptimizer"));
+        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("pricingModel");
+        elemField.setXmlName(new javax.xml.namespace.QName("https://adwords.google.com/api/adwords/cm/v201209", "pricingModel"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://adwords.google.com/api/adwords/cm/v201209", "PricingModel"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("conversionOptimizerBidType");
+        elemField.setXmlName(new javax.xml.namespace.QName("https://adwords.google.com/api/adwords/cm/v201209", "conversionOptimizerBidType"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://adwords.google.com/api/adwords/cm/v201209", "ConversionOptimizerBidType"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+    }
+
+    /**
+     * Return type metadata object
+     */
+    public static org.apache.axis.description.TypeDesc getTypeDesc() {
+        return typeDesc;
+    }
+
+    /**
+     * Get Custom Serializer
+     */
+    public static org.apache.axis.encoding.Serializer getSerializer(
+           java.lang.String mechType, 
+           java.lang.Class _javaType,  
+           javax.xml.namespace.QName _xmlType) {
+        return 
+          new  org.apache.axis.encoding.ser.BeanSerializer(
+            _javaType, _xmlType, typeDesc);
+    }
+
+    /**
+     * Get Custom Deserializer
+     */
+    public static org.apache.axis.encoding.Deserializer getDeserializer(
+           java.lang.String mechType, 
+           java.lang.Class _javaType,  
+           javax.xml.namespace.QName _xmlType) {
+        return 
+          new  org.apache.axis.encoding.ser.BeanDeserializer(
+            _javaType, _xmlType, typeDesc);
+    }
+
+}

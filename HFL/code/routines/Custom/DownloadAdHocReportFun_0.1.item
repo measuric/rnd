@@ -1,0 +1,125 @@
+package routines;
+	import java.io.BufferedInputStream;
+	import java.io.BufferedOutputStream;
+	import java.io.File;
+	import java.io.FileOutputStream;
+	import java.io.IOException;
+	import java.io.InputStream;
+	import java.io.OutputStream;
+	import java.io.OutputStreamWriter;
+	import java.net.HttpURLConnection;
+	import java.net.URL;
+	import java.net.URLEncoder;
+
+	import com.google.api.adwords.lib.AuthToken;
+	import com.google.api.adwords.v201209.jaxb.cm.DownloadFormat;
+
+	/**
+	 * This example downloads AdHoc report without using the client library using AWQL. See <a
+	 * href="https://developers.google.com/adwords/api/docs/guides/awql">
+	 * https://developers.google.com/adwords/api/docs/guides/awql</a>
+	 *
+	 * @author thagikura@google.com (Takeshi Hagikura)
+	 */
+	public class DownloadAdHocReportFun {
+
+		public static void DownloadAdHocReportToCsv(String DEFINITION,String fileName) {
+	    try {
+	    	  String email = "";
+	          String password = "";
+	          String developerToken = "qBcwtiqRSjlYrvKwtQiT5w"; //qBcwtiqRSjlYrvKwtQiT5w
+	          Long clientCustomerId = Long.parseLong("4156709467");
+
+	          // Create authToken.
+	          String authToken = new AuthToken(email, password).getAuthToken();
+
+	          
+	          
+	          //*****************************************************
+
+	      boolean returnMoneyInMicros = false;
+
+	      String url = "https://adwords.google.com/api/adwords/reportdownload/v201209";
+
+	      HttpURLConnection urlConn = (HttpURLConnection) new URL(url).openConnection();
+	      urlConn.setRequestProperty("Authorization", "GoogleLogin auth=" + authToken);
+	      urlConn.setRequestProperty("developerToken", developerToken);
+	      urlConn.setInstanceFollowRedirects(false);
+
+	      urlConn.setRequestProperty("Content-type", "application/x-www-form-urlencoded");
+	      urlConn.setRequestMethod("POST");
+	      urlConn.setDoOutput(true);
+	      urlConn.setRequestProperty("clientCustomerId", clientCustomerId.toString());
+	      urlConn.setRequestProperty("returnMoneyInMicros", Boolean.toString(returnMoneyInMicros));
+	      OutputStreamWriter writer = new OutputStreamWriter(urlConn.getOutputStream());
+
+	    /* String query =
+	          "SELECT AdGroupId, Id, KeywordText, KeywordMatchType, Impressions, Clicks, Cost "
+	          + "FROM KEYWORDS_PERFORMANCE_REPORT WHERE Impressions > 0 DURING YESTERDAY";*/
+
+	    /*  String query =
+	          "SELECT AdGroupId, Id, KeywordText, KeywordMatchType, Impressions, Clicks, Cost "
+	          + "FROM KEYWORDS_PERFORMANCE_REPORT  WHERE Impressions > 0 DURING YESTERDAY";
+	     */ 
+	   //   writer.write("__rdquery=" + URLEncoder.encode(query, "UTF-8"));
+	         writer.write("__rdxml=" + URLEncoder.encode(DEFINITION, "UTF-8"));
+	  //    writer.write("&__fmt=" + URLEncoder.encode(DownloadFormat.CSV.value(), "UTF-8"));
+	         writer.write("&__fmt=" + URLEncoder.encode(DownloadFormat.TSV.value(), "UTF-8"));
+	      writer.close();
+
+	      urlConn.connect();
+	      writeStreamToStream(urlConn.getInputStream(), new FileOutputStream(new File(fileName)));
+	      writer.close();
+	 	    } catch (Exception e) {
+	      e.printStackTrace();
+	    }
+	  }
+
+	  /**
+	   * Writes the contents of the {@link InputStream} inputStream to the {@link OutputStream}
+	   * outputStream.
+	   *
+	   * @param inputStream the {@code InputStream} to read from
+	   * @param outputStream the {@code OutputStream} to write to
+	   * @throws IOException if an I/O error occurs
+	   */
+	  private static void writeStreamToStream(InputStream inputStream, OutputStream outputStream)
+	      throws IOException {
+	    BufferedInputStream bis = new BufferedInputStream(inputStream);
+	    BufferedOutputStream bos = new BufferedOutputStream(outputStream);
+
+	    try {
+	      int i = 0;
+	      while ((i = bis.read()) != -1) {
+	        bos.write(i);
+	      }
+	    } finally {
+	      if (bis != null) {
+	        bis.close();
+	      }
+
+	      if (bos != null) {
+	        bos.close();
+	      }
+	    }
+	  }
+	
+	
+	
+	
+/*	public static void main(String[] args) {
+
+		  final String DEFINITION = "<reportDefinition><selector><fields>AdGroupId</fields>"
+    	      + "<fields>AdGroupName</fields>"
+    	      + "<fields>AdGroupStatus</fields>"
+    	      + "<fields>CampaignName</fields><fields>AverageCpc</fields><fields>AverageCpm</fields>"
+    	      + "</selector><reportName>Custom DISPLAY_KEYWORD_PERFORMANCE_REPORT for testing</reportName>"
+    	      + "<reportType>ADGROUP_PERFORMANCE_REPORT</reportType>"
+    	      + "<dateRangeType>YESTERDAY</dateRangeType><downloadFormat>CSV</downloadFormat>"
+    	      + "</reportDefinition>";
+		  String fileName = "E://googleraja_XML2223.csv";  
+		DownloadAdHocReportToCsv(DEFINITION,fileName);
+
+	}*/
+	}
+//}

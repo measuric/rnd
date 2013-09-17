@@ -1,0 +1,305 @@
+/**
+ * InductionResponse.java
+ *
+ * This file was auto-generated from WSDL
+ * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ */
+
+package routines;
+
+public class InductionResponse  implements java.io.Serializable {
+    private java.lang.String branchCode;
+
+    private java.lang.String cartonId;
+
+    private java.lang.String order;
+
+    private java.lang.String resultMessage;
+
+    private java.lang.String returnMessage;
+
+    private java.lang.String toteId;
+
+    public InductionResponse() {
+    }
+
+    public InductionResponse(
+           java.lang.String branchCode,
+           java.lang.String cartonId,
+           java.lang.String order,
+           java.lang.String resultMessage,
+           java.lang.String returnMessage,
+           java.lang.String toteId) {
+           this.branchCode = branchCode;
+           this.cartonId = cartonId;
+           this.order = order;
+           this.resultMessage = resultMessage;
+           this.returnMessage = returnMessage;
+           this.toteId = toteId;
+    }
+
+
+    /**
+     * Gets the branchCode value for this InductionResponse.
+     * 
+     * @return branchCode
+     */
+    public java.lang.String getBranchCode() {
+        return branchCode;
+    }
+
+
+    /**
+     * Sets the branchCode value for this InductionResponse.
+     * 
+     * @param branchCode
+     */
+    public void setBranchCode(java.lang.String branchCode) {
+        this.branchCode = branchCode;
+    }
+
+
+    /**
+     * Gets the cartonId value for this InductionResponse.
+     * 
+     * @return cartonId
+     */
+    public java.lang.String getCartonId() {
+        return cartonId;
+    }
+
+
+    /**
+     * Sets the cartonId value for this InductionResponse.
+     * 
+     * @param cartonId
+     */
+    public void setCartonId(java.lang.String cartonId) {
+        this.cartonId = cartonId;
+    }
+
+
+    /**
+     * Gets the order value for this InductionResponse.
+     * 
+     * @return order
+     */
+    public java.lang.String getOrder() {
+        return order;
+    }
+
+
+    /**
+     * Sets the order value for this InductionResponse.
+     * 
+     * @param order
+     */
+    public void setOrder(java.lang.String order) {
+        this.order = order;
+    }
+
+
+    /**
+     * Gets the resultMessage value for this InductionResponse.
+     * 
+     * @return resultMessage
+     */
+    public java.lang.String getResultMessage() {
+        return resultMessage;
+    }
+
+
+    /**
+     * Sets the resultMessage value for this InductionResponse.
+     * 
+     * @param resultMessage
+     */
+    public void setResultMessage(java.lang.String resultMessage) {
+        this.resultMessage = resultMessage;
+    }
+
+
+    /**
+     * Gets the returnMessage value for this InductionResponse.
+     * 
+     * @return returnMessage
+     */
+    public java.lang.String getReturnMessage() {
+        return returnMessage;
+    }
+
+
+    /**
+     * Sets the returnMessage value for this InductionResponse.
+     * 
+     * @param returnMessage
+     */
+    public void setReturnMessage(java.lang.String returnMessage) {
+        this.returnMessage = returnMessage;
+    }
+
+
+    /**
+     * Gets the toteId value for this InductionResponse.
+     * 
+     * @return toteId
+     */
+    public java.lang.String getToteId() {
+        return toteId;
+    }
+
+
+    /**
+     * Sets the toteId value for this InductionResponse.
+     * 
+     * @param toteId
+     */
+    public void setToteId(java.lang.String toteId) {
+        this.toteId = toteId;
+    }
+
+    private java.lang.Object __equalsCalc = null;
+    public synchronized boolean equals(java.lang.Object obj) {
+        if (!(obj instanceof InductionResponse)) return false;
+        InductionResponse other = (InductionResponse) obj;
+        if (obj == null) return false;
+        if (this == obj) return true;
+        if (__equalsCalc != null) {
+            return (__equalsCalc == obj);
+        }
+        __equalsCalc = obj;
+        boolean _equals;
+        _equals = true && 
+            ((this.branchCode==null && other.getBranchCode()==null) || 
+             (this.branchCode!=null &&
+              this.branchCode.equals(other.getBranchCode()))) &&
+            ((this.cartonId==null && other.getCartonId()==null) || 
+             (this.cartonId!=null &&
+              this.cartonId.equals(other.getCartonId()))) &&
+            ((this.order==null && other.getOrder()==null) || 
+             (this.order!=null &&
+              this.order.equals(other.getOrder()))) &&
+            ((this.resultMessage==null && other.getResultMessage()==null) || 
+             (this.resultMessage!=null &&
+              this.resultMessage.equals(other.getResultMessage()))) &&
+            ((this.returnMessage==null && other.getReturnMessage()==null) || 
+             (this.returnMessage!=null &&
+              this.returnMessage.equals(other.getReturnMessage()))) &&
+            ((this.toteId==null && other.getToteId()==null) || 
+             (this.toteId!=null &&
+              this.toteId.equals(other.getToteId())));
+        __equalsCalc = null;
+        return _equals;
+    }
+
+    private boolean __hashCodeCalc = false;
+    public synchronized int hashCode() {
+        if (__hashCodeCalc) {
+            return 0;
+        }
+        __hashCodeCalc = true;
+        int _hashCode = 1;
+        if (getBranchCode() != null) {
+            _hashCode += getBranchCode().hashCode();
+        }
+        if (getCartonId() != null) {
+            _hashCode += getCartonId().hashCode();
+        }
+        if (getOrder() != null) {
+            _hashCode += getOrder().hashCode();
+        }
+        if (getResultMessage() != null) {
+            _hashCode += getResultMessage().hashCode();
+        }
+        if (getReturnMessage() != null) {
+            _hashCode += getReturnMessage().hashCode();
+        }
+        if (getToteId() != null) {
+            _hashCode += getToteId().hashCode();
+        }
+        __hashCodeCalc = false;
+        return _hashCode;
+    }
+
+    // Type metadata
+    private static org.apache.axis.description.TypeDesc typeDesc =
+        new org.apache.axis.description.TypeDesc(InductionResponse.class, true);
+
+    static {
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://www.upp.com/irms/businesslogic/", "InductionResponse"));
+        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("branchCode");
+        elemField.setXmlName(new javax.xml.namespace.QName("http://www.upp.com/irms/businesslogic/", "BranchCode"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(true);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("cartonId");
+        elemField.setXmlName(new javax.xml.namespace.QName("http://www.upp.com/irms/businesslogic/", "CartonId"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(true);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("order");
+        elemField.setXmlName(new javax.xml.namespace.QName("http://www.upp.com/irms/businesslogic/", "Order"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(true);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("resultMessage");
+        elemField.setXmlName(new javax.xml.namespace.QName("http://www.upp.com/irms/businesslogic/", "ResultMessage"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(true);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("returnMessage");
+        elemField.setXmlName(new javax.xml.namespace.QName("http://www.upp.com/irms/businesslogic/", "ReturnMessage"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(true);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("toteId");
+        elemField.setXmlName(new javax.xml.namespace.QName("http://www.upp.com/irms/businesslogic/", "ToteId"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(true);
+        typeDesc.addFieldDesc(elemField);
+    }
+
+    /**
+     * Return type metadata object
+     */
+    public static org.apache.axis.description.TypeDesc getTypeDesc() {
+        return typeDesc;
+    }
+
+    /**
+     * Get Custom Serializer
+     */
+    public static org.apache.axis.encoding.Serializer getSerializer(
+           java.lang.String mechType, 
+           java.lang.Class _javaType,  
+           javax.xml.namespace.QName _xmlType) {
+        return 
+          new  org.apache.axis.encoding.ser.BeanSerializer(
+            _javaType, _xmlType, typeDesc);
+    }
+
+    /**
+     * Get Custom Deserializer
+     */
+    public static org.apache.axis.encoding.Deserializer getDeserializer(
+           java.lang.String mechType, 
+           java.lang.Class _javaType,  
+           javax.xml.namespace.QName _xmlType) {
+        return 
+          new  org.apache.axis.encoding.ser.BeanDeserializer(
+            _javaType, _xmlType, typeDesc);
+    }
+
+}

@@ -1,0 +1,58 @@
+/**
+ * CampaignServiceInterface.java
+ *
+ * This file was auto-generated from WSDL
+ * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ */
+
+package routines;
+
+public interface CampaignServiceInterface extends java.rmi.Remote {
+
+    /**
+     * Returns the list of campaigns that meet the selector criteria.
+     * 
+     *         
+     * @param serviceSelector the selector specifying the {@link Campaign}s
+     * to return.
+     *         
+     * @return A list of campaigns.
+     *         
+     * @throws ApiException if problems occurred while fetching campaign
+     * information.
+     */
+    public routines.CampaignPage get(routines.Selector serviceSelector) throws java.rmi.RemoteException, routines.ApiException;
+
+    /**
+     * Adds, updates, or deletes campaigns.
+     *         <p class="note"><b>Note:</b> {@link CampaignOperation} does
+     * not support the
+     *         <code>REMOVE</code> operator. To delete a campaign, set its
+     * {@link Campaign#status status} to <code>DELETED</code>.</p>
+     *         
+     * @param operations A list of unique operations.
+     *         The same campaign cannot be specified in more than one operation.
+     * 
+     * @return The list of updated campaigns, returned in the same order
+     * as the
+     *         <code>operations</code> array.
+     *         
+     * @throws ApiException if problems occurred while updating campaign
+     * information.
+     */
+    public routines.CampaignReturnValue mutate(routines.CampaignOperation[] operations) throws java.rmi.RemoteException, routines.ApiException;
+
+    /**
+     * Returns the list of campaigns that match the query.
+     *         
+     *         
+     * @param query The SQL-like AWQL query string.
+     *         
+     * @return A list of campaigns.
+     *         
+     * @throws ApiException if problems occur while parsing the query or
+     * fetching campaign
+     *         information.
+     */
+    public routines.CampaignPage query(java.lang.String query) throws java.rmi.RemoteException, routines.ApiException;
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" confirmationNeeded="false" name="Default">
+  <contextParameter comment="" name="clicklabdatabase_Password" prompt="clicklabdatabase_Password?" promptNeeded="false" type="id_Password" value="JDf5s9Dl1wU="/>
+  <contextParameter comment="" name="clicklabdatabase_Database" prompt="clicklabdatabase_Database?" promptNeeded="false" type="id_String" value="cliklab_db"/>
+  <contextParameter comment="" name="clicklabdatabase_Server" prompt="clicklabdatabase_Server?" promptNeeded="false" type="id_String" value="107.21.230.228"/>
+  <contextParameter comment="" name="clicklabdatabase_Login" prompt="clicklabdatabase_Login?" promptNeeded="false" type="id_String" value="cliklab"/>
+  <contextParameter comment="" name="clicklabdatabase_Port" prompt="clicklabdatabase_Port?" promptNeeded="false" type="id_String" value="3306"/>
+  <contextParameter comment="" name="clicklabdatabase_AdditionalParams" prompt="clicklabdatabase_AdditionalParams?" promptNeeded="false" type="id_String" value="noDatetimeStringSync=true"/>
+</talendfile:ContextType>

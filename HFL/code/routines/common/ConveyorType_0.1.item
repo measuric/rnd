@@ -1,0 +1,7 @@
+package routines;
+
+public enum ConveyorType {
+	TrafficApp,
+	Dematic,
+	Other
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" confirmationNeeded="false" name="Default">
+  <contextParameter comment="" name="loginUserName" prompt="loginUserName?" promptNeeded="false" type="id_String" value="&quot;irmswm&quot;"/>
+  <contextParameter comment="" name="loginUserPassword" prompt="loginUserPassword?" promptNeeded="false" type="id_String" value="&quot;password&quot;"/>
+  <contextParameter comment="" name="dataServiceBaseUrl" prompt="dataServiceBaseUrl?" promptNeeded="false" type="id_String" value="&quot;http://198.179.146.23/irms360/rest/Integration/&quot;"/>
+  <contextParameter comment="" name="sessionId" prompt="sessionId?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter comment="" name="downloadDirectory" prompt="downloadDirectory?" promptNeeded="false" type="id_String" value="&quot;C:/Upp/Irms360/download/&quot;"/>
+  <contextParameter comment="" name="integrationServiceName" prompt="integrationServiceName?" promptNeeded="false" type="id_String" value="&quot;IntegrationService&quot;"/>
+  <contextParameter comment="" name="tempXml" prompt="tempXml?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter comment="" name="ifaceEntityMapDirectory" prompt="ifaceEntityMapDirectory?" promptNeeded="false" type="id_String" value="&quot;C:/Talend/data/entityMaps/&quot;"/>
+  <contextParameter comment="" name="uploadDirectory" prompt="uploadDirectory?" promptNeeded="false" type="id_String" value="&quot;C:/Upp/Irms360/upload/&quot;"/>
+</talendfile:ContextType>

@@ -1,0 +1,544 @@
+package routines;
+
+import java.util.Iterator;
+import java.util.HashMap;
+import java.util.Map;
+import 
+
+org.apache.commons.lang3.StringUtils;
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+
+public class 
+
+ResponseGenerator {
+	
+	/**
+	 * Generates an Induction response that need to be posted to 
+
+Restful web service.
+	 * @return String 
+	 */
+	public static String generateInductionResponse
+
+(String branchCode, String licensePlateCode,String orderCode, 
+			String orderSuffix, 
+
+String packLane, String socketIp, String serverPort, String shipLane, String weight, 
+			
+
+String zoneCodes, String zoneGroupCode, String toteCode, String resultMessage, String errorsRaised, 
+
+String errorMessage  ){
+		
+		StringBuilder inductionResponse = new StringBuilder();
+	
+
+	inductionResponse.append("\"[{\\\"branch_code\\\":\\\"");
+		
+
+inductionResponse.append(branchCode);
+		inductionResponse.append("\\\",\\\"license_plate_code\\\":\\\"");
+		inductionResponse.append(licensePlateCode);
+		
+
+inductionResponse.append("\\\",\\\"order_code\\\":\\\"");
+		inductionResponse.append
+
+(orderCode);
+		inductionResponse.append("\\\",\\\"order_suffix\\\":\\\"");
+		
+
+inductionResponse.append(orderSuffix);
+		inductionResponse.append("\\\",\\\"pack_lane\\\":\\\"");
+		inductionResponse.append(packLane);
+		inductionResponse.append("\\\",\\\"socket_ip\\\":\\\"");
+		inductionResponse.append(socketIp);
+		
+
+inductionResponse.append("\\\",\\\"server_port\\\":\\\"");
+		inductionResponse.append
+
+(serverPort);
+		inductionResponse.append("\\\",\\\"ship_lane\\\":\\\"");
+		
+
+inductionResponse.append(shipLane);
+		inductionResponse.append("\\\",\\\"weight\\\":\\\"");
+	
+
+	inductionResponse.append(weight);
+		inductionResponse.append("\\\",\\\"zone_codes\\\":\\\"");
+		inductionResponse.append(zoneCodes);
+		inductionResponse.append("\\\",\\\"zone_group_code\\\":\\\"");
+		inductionResponse.append(zoneGroupCode);
+		
+
+inductionResponse.append("\\\",\\\"tote_code\\\":\\\"");
+		inductionResponse.append
+
+(toteCode);
+		inductionResponse.append("\\\",\\\"result_message\\\":\\\"");
+		
+
+inductionResponse.append(resultMessage);
+		inductionResponse.append("\\\",\\\"errors_raised\\\":\\\"");
+		inductionResponse.append(errorsRaised);
+		
+
+inductionResponse.append("\\\",\\\"error_message\\\":\\\"");
+		inductionResponse.append
+
+(errorMessage);
+		inductionResponse.append("\\\"}]\"");
+		return 
+
+inductionResponse.toString();
+	}
+	
+	/**
+	 * Generates an Induction staging response that 
+
+need to be posted to Restful web service.
+	 * @return String 
+	 */
+	public static String 
+
+generateInductionStagingResponse(String messageType, String palletId, String zone, 
+			
+
+String receivingStation, String errorsRaised, String errorMessage  ){
+		
+		
+
+StringBuilder inductionResponse = new StringBuilder();
+		inductionResponse.append("\"[{\\\"message_type\\\":\\\"");
+		inductionResponse.append(messageType);
+		
+
+inductionResponse.append("\\\",\\\"pallet_id\\\":\\\"");
+		inductionResponse.append
+
+(palletId);
+		inductionResponse.append("\\\",\\\"zone\\\":\\\"");
+		
+
+inductionResponse.append(zone);
+		inductionResponse.append("\\\",\\\"receiving_station\\\":\\\"");
+		inductionResponse.append(receivingStation);
+		inductionResponse.append("\\\",\\\"errors_raised\\\":\\\"");
+		inductionResponse.append(errorsRaised);
+		
+
+inductionResponse.append("\\\",\\\"error_message\\\":\\\"");
+		inductionResponse.append
+
+(errorMessage);
+		inductionResponse.append("\\\"}]\"");
+		return 
+
+inductionResponse.toString();
+	}
+	
+
+	/**
+	 * 
+	 * @param jsonString
+	 * @return
+	
+
+ */
+	public static HashMap<String,String> parse(String jsonString) throws Exception{
+		
+
+HashMap<String,String> jsonContentMap = new HashMap<String,String>();
+		jsonString = 
+
+StringUtils.removeStart(jsonString, "\"");
+		jsonString = StringUtils.removeEnd(jsonString, 
+
+"\"");
+		jsonString = jsonString.replaceAll("\\\\", "");
+		JSONArray jsonArray = new 
+
+JSONArray(jsonString);
+		
+		// Since we process only one record at a time.
+		
+
+JSONObject jsonObject = jsonArray.getJSONObject(0);
+		Iterator<String> itKeys = 
+
+jsonObject.keys();
+		while (itKeys.hasNext()) {
+			String k=itKeys.next();
+	
+
+		jsonContentMap.put(k, jsonObject.get(k).toString());
+		}
+		return 
+
+jsonContentMap;
+	}
+	
+	/**
+	 * Generates an shipping response that need to be posted to 
+
+Restful web service.
+	 * @return String 
+	 */
+	public static String generateShippingResponse
+
+(ShippingObject shippingObject){
+		
+		StringBuilder inductionResponse = new 
+
+StringBuilder();
+		inductionResponse.append("\"[{\\\"message_type\\\":\\\"");
+		
+
+inductionResponse.append(shippingObject.getMessageType());
+		inductionResponse.append("\\\",\\\"order_code\\\":\\\"");
+		inductionResponse.append(shippingObject.getOrderCode());
+	
+
+	inductionResponse.append("\\\",\\\"order_suffix\\\":\\\"");
+		
+
+inductionResponse.append(shippingObject.getOrderSuffix());
+		inductionResponse.append("\\\",\\\"carton_code\\\":\\\"");
+		inductionResponse.append(shippingObject.getCartonCode());
+	
+
+	inductionResponse.append("\\\",\\\"tracking_code\\\":\\\"");
+		
+
+inductionResponse.append(shippingObject.getTrackingCode());
+		inductionResponse.append("\\\",\\\"carton_weight\\\":\\\"");
+		inductionResponse.append
+
+(shippingObject.getCartonWeight());
+		inductionResponse.append("\\\",\\\"shipping_lane\\\":\\\"");
+		inductionResponse.append(shippingObject.getShippingLane());
+		
+
+inductionResponse.append("\\\",\\\"company\\\":\\\"");
+		inductionResponse.append
+
+(shippingObject.getCompany());
+		inductionResponse.append("\\\",\\\"warehouse\\\":\\\"");
+	
+
+	inductionResponse.append(shippingObject.getWarehouse());
+		
+
+inductionResponse.append("\\\",\\\"IP_Address\\\":\\\"");
+		inductionResponse.append
+
+(shippingObject.getIpAddress());
+		inductionResponse.append("\\\",\\\"Port_no_IRMSShippingServer\\\":\\\"");
+		inductionResponse.append
+
+(shippingObject.getPortNumberIRMSShippingServer());
+		inductionResponse.append("\\\",\\\"errors_raised\\\":\\\"");
+		inductionResponse.append(shippingObject.getErrorsRaised());
+	
+
+	inductionResponse.append("\\\",\\\"error_message\\\":\\\"");
+		
+
+inductionResponse.append(shippingObject.getErrorMessage());
+		if(shippingObject.getCustom1
+
+()!=null){
+			inductionResponse.append("\\\",\\\"custom1\\\":\\\"");
+			
+
+inductionResponse.append(shippingObject.getCustom1());
+		}
+		
+
+inductionResponse.append("\\\"}]\"");
+		return inductionResponse.toString();
+	}
+
+	public 
+
+static String generatePickzoneResponse(String resultMessage,String toteCode, 
+			String 
+
+zoneCode,String messageType, String orderCode, 
+			String orderSuffix, String cartonCode, 
+
+String shortFlag,
+			String errorsRaised,String errorMessage){		
+	
+
+	StringBuilder pickZoneResponse = new StringBuilder();
+		pickZoneResponse.append("\"[{\\\"result_message\\\":\\\"");
+		pickZoneResponse.append(resultMessage);
+		
+
+pickZoneResponse.append("\\\",\\\"tote_code\\\":\\\"");
+		pickZoneResponse.append(toteCode);
+	
+
+	pickZoneResponse.append("\\\",\\\"zone_code\\\":\\\"");
+		pickZoneResponse.append
+
+(zoneCode);		
+		pickZoneResponse.append("\\\",\\\"message_type\\\":\\\"");
+	
+
+	pickZoneResponse.append(messageType);		
+		pickZoneResponse.append("\\\",\\\"order_code\\\":\\\"");
+		pickZoneResponse.append(orderCode);
+		
+
+pickZoneResponse.append("\\\",\\\"order_suffix\\\":\\\"");
+		pickZoneResponse.append
+
+(orderSuffix);
+		pickZoneResponse.append("\\\",\\\"carton_code\\\":\\\"");
+		
+
+pickZoneResponse.append(cartonCode);
+		pickZoneResponse.append("\\\",\\\"short_flag\\\":\\\"");
+		pickZoneResponse.append(shortFlag);	
+		pickZoneResponse.append("\\\",\\\"errors_raised\\\":\\\"");
+		pickZoneResponse.append(errorsRaised);
+		
+
+pickZoneResponse.append("\\\",\\\"error_message\\\":\\\"");
+		pickZoneResponse.append
+
+(errorMessage);
+		pickZoneResponse.append("\\\"}]\"");
+		return 
+
+pickZoneResponse.toString();
+	}
+	
+	public static String generateUnPackResponse(String 
+
+messageType,
+			String cartonCode, String trackingCode, String company,
+			
+
+String warehouse, String errorsRaised, String errorMessage){		
+		StringBuilder 
+
+UnPackResponse = new StringBuilder();
+		UnPackResponse.append("\"[{\\\"message_type\\\":\\\"");
+	
+
+	UnPackResponse.append(messageType);
+		UnPackResponse.append("\\\",\\\"carton_code\\\":\\\"");
+		UnPackResponse.append(cartonCode);
+		UnPackResponse.append("\\\",\\\"tracking_code\\\":\\\"");
+		UnPackResponse.append(trackingCode);			
+	
+
+	UnPackResponse.append("\\\",\\\"company\\\":\\\"");
+		UnPackResponse.append(company);
+	
+
+	UnPackResponse.append("\\\",\\\"warehouse\\\":\\\"");
+		UnPackResponse.append
+
+(warehouse);		
+		UnPackResponse.append("\\\",\\\"errors_raised\\\":\\\"");
+	
+
+	UnPackResponse.append(errorsRaised);
+		UnPackResponse.append("\\\",\\\"error_message\\\":\\\"");
+		UnPackResponse.append(errorMessage);
+		UnPackResponse.append("\\\"}]\"");
+		return UnPackResponse.toString();
+	}
+		
+	public static 
+
+String generateFullToteResponse(String messageType,
+			String counter, String date, 
+
+String time,
+			String orderCode, String orderSuffix, String cartonCode,
+		
+
+	String cartonWeight, String zone, String packingGroupNumber,
+			String 
+
+shippingTypeCode, String branchId, String toteId,
+			String errorsRaised, String 
+
+errorMessage){		
+		StringBuilder FullToteResponse = new StringBuilder();
+		
+
+FullToteResponse.append("\"[{\\\"message_type\\\":\\\"");
+		FullToteResponse.append
+
+(messageType);
+		FullToteResponse.append("\\\",\\\"counter\\\":\\\"");
+		
+
+FullToteResponse.append(counter);
+		FullToteResponse.append("\\\",\\\"date\\\":\\\"");
+	
+
+	FullToteResponse.append(date);			
+		FullToteResponse.append("\\\",\\\"time\\\":\\\"");
+		FullToteResponse.append(time);
+		FullToteResponse.append("\\\",\\\"order_code\\\":\\\"");
+		FullToteResponse.append(orderCode);		
+		
+
+FullToteResponse.append("\\\",\\\"order_suffix\\\":\\\"");
+		FullToteResponse.append
+
+(orderSuffix);			
+		FullToteResponse.append("\\\",\\\"carton_code\\\":\\\"");
+		FullToteResponse.append(cartonCode);
+		FullToteResponse.append("\\\",\\\"carton_weight\\\":\\\"");
+		FullToteResponse.append(cartonWeight);	
+		
+
+FullToteResponse.append("\\\",\\\"zone\\\":\\\"");
+		FullToteResponse.append(zone);		
+
+	
+		FullToteResponse.append("\\\",\\\"packing_group_number\\\":\\\"");
+		
+
+FullToteResponse.append(packingGroupNumber);
+		FullToteResponse.append("\\\",\\\"shipping_type_code\\\":\\\"");
+		FullToteResponse.append(shippingTypeCode);	
+	
+
+	FullToteResponse.append("\\\",\\\"branch_id\\\":\\\"");
+		FullToteResponse.append
+
+(branchId);	
+		FullToteResponse.append("\\\",\\\"tote_id\\\":\\\"");
+		
+
+FullToteResponse.append(toteId);	
+		FullToteResponse.append("\\\",\\\"errors_raised\\\":\\\"");
+		FullToteResponse.append(errorsRaised);
+		
+
+FullToteResponse.append("\\\",\\\"error_message\\\":\\\"");
+		FullToteResponse.append
+
+(errorMessage);
+		FullToteResponse.append("\\\"}]\"");
+		return 
+
+FullToteResponse.toString();
+	}
+	
+	// Generates NonToteItems response
+	public static 
+
+String generateNonToteItemsResponse(String messageType,
+			String counter, String date, 
+
+String time,String orderNumber, 
+			String cartonCode,String packLane,String 
+
+shipLane, String totalNumberOfCartonsForOrder, 
+			String errorsRaised, String 
+
+errorMessage){		
+		StringBuilder FullToteResponse = new StringBuilder();
+		
+
+FullToteResponse.append("\"[{\\\"message_type\\\":\\\"");
+		FullToteResponse.append
+
+(messageType);
+		FullToteResponse.append("\\\",\\\"counter\\\":\\\"");
+		
+
+FullToteResponse.append(counter);
+		FullToteResponse.append("\\\",\\\"date\\\":\\\"");
+	
+
+	FullToteResponse.append(date);			
+		FullToteResponse.append("\\\",\\\"time\\\":\\\"");
+		FullToteResponse.append(time);
+		FullToteResponse.append("\\\",\\\"order_number\\\":\\\"");
+		FullToteResponse.append(orderNumber);		
+		
+
+FullToteResponse.append("\\\",\\\"carton_code\\\":\\\"");
+		FullToteResponse.append
+
+(cartonCode);
+		FullToteResponse.append("\\\",\\\"pack_lane\\\":\\\"");
+		
+
+FullToteResponse.append(packLane);
+		FullToteResponse.append("\\\",\\\"ship_lane\\\":\\\"");
+	
+
+	FullToteResponse.append(shipLane);	
+		FullToteResponse.append("\\\",\\\"total_number_of_cartons_for_order\\\":\\\"");
+		FullToteResponse.append
+
+(totalNumberOfCartonsForOrder);	
+		FullToteResponse.append("\\\",\\\"errors_raised\\\":\\\"");
+		FullToteResponse.append(errorsRaised);
+		FullToteResponse.append("\\\",\\\"error_message\\\":\\\"");
+		FullToteResponse.append(errorMessage);
+		
+
+FullToteResponse.append("\\\"}]\"");
+		return FullToteResponse.toString();
+	}
+		
+
+	
+	public static String generatePutZoneResponse(String messageType,
+			
+
+String palletId, String zoneCode, String receivingStation,
+			String errorsRaised, 
+
+String errorMessage){		
+		StringBuilder PutZoneResponse = new StringBuilder();
+	
+
+	PutZoneResponse.append("\"[{\\\"message_type\\\":\\\"");
+		PutZoneResponse.append
+
+(messageType);
+		PutZoneResponse.append("\\\",\\\"pallet_id\\\":\\\"");
+		
+
+PutZoneResponse.append(palletId);
+		PutZoneResponse.append("\\\",\\\"zone_code\\\":\\\"");
+	
+
+	PutZoneResponse.append(zoneCode);			
+		PutZoneResponse.append
+
+("\\\",\\\"receiving_station\\\":\\\"");
+		PutZoneResponse.append(receivingStation);	
+
+	
+		PutZoneResponse.append("\\\",\\\"errors_raised\\\":\\\"");
+		
+
+PutZoneResponse.append(errorsRaised);
+		PutZoneResponse.append("\\\",\\\"error_message\\\":\\\"");
+		PutZoneResponse.append(errorMessage);
+		PutZoneResponse.append("\\\"}]\"");
+	
+
+	return PutZoneResponse.toString();
+	}
+	
+}

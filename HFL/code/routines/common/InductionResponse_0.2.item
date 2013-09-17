@@ -1,0 +1,271 @@
+package routines;
+
+import java.util.Iterator;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.apache.commons.lang3.StringUtils;
+
+public class InductionResponse {
+    private java.lang.String branchCode;
+
+    private java.lang.String cartonId;
+
+    private java.lang.String order;
+
+    private java.lang.String resultMessage;
+
+    private java.lang.String returnMessage;
+
+    private java.lang.String toteId;
+
+    public InductionResponse() {
+    }
+
+    public InductionResponse(
+           java.lang.String branchCode,
+           java.lang.String cartonId,
+           java.lang.String order,
+           java.lang.String resultMessage,
+           java.lang.String returnMessage,
+           java.lang.String toteId) {
+           this.branchCode = branchCode;
+           this.cartonId = cartonId;
+           this.order = order;
+           this.resultMessage = resultMessage;
+           this.returnMessage = returnMessage;
+           this.toteId = toteId;
+    }
+
+/**
+ * 
+ * @param response
+ * @return
+ * @throws Exception
+ */
+ public static InductionResponse parse(String response) throws Exception{
+    	
+    	response = StringUtils.removeStart(response, "\"");
+    	response = StringUtils.removeEnd(response, "\"");
+    	response = response.replaceAll("\\\\", "");
+    	System.out.println("----------> "+response);
+		JSONArray jsonArray = new JSONArray(response);
+		InductionResponse currentResponse = new InductionResponse();
+		
+		// Since we process only one record at a time.
+		JSONObject jsonObject = jsonArray.getJSONObject(0);
+		Iterator<String> itKeys = jsonObject.keys();
+		while (itKeys.hasNext()) {
+			String k=itKeys.next();
+            if("branch_code".equals(k)){
+            	currentResponse.setBranchCode(jsonObject.get(k).toString());
+            }
+            else if("license_plate_code".equals(k)){
+            	currentResponse.setCartonId(jsonObject.get(k).toString());
+            }
+            else if("order_code".equals(k)){
+            	currentResponse.setOrder(jsonObject.get(k).toString());
+            }
+            else if("result_message".equals(k)){
+            	currentResponse.setResultMessage(jsonObject.get(k).toString());
+            }
+            else if("tote_code".equals(k)){
+            	currentResponse.setToteId(jsonObject.get(k).toString());
+            }
+        }  
+    	
+    	return currentResponse;
+    }
+    
+    
+    /**
+     * Gets the branchCode value for this InductionResponse.
+     * 
+     * @return branchCode
+     */
+    public java.lang.String getBranchCode() {
+        return branchCode;
+    }
+
+
+    /**
+     * Sets the branchCode value for this InductionResponse.
+     * 
+     * @param branchCode
+     */
+    public void setBranchCode(java.lang.String branchCode) {
+        this.branchCode = branchCode;
+    }
+
+
+    /**
+     * Gets the cartonId value for this InductionResponse.
+     * 
+     * @return cartonId
+     */
+    public java.lang.String getCartonId() {
+        return cartonId;
+    }
+
+
+    /**
+     * Sets the cartonId value for this InductionResponse.
+     * 
+     * @param cartonId
+     */
+    public void setCartonId(java.lang.String cartonId) {
+        this.cartonId = cartonId;
+    }
+
+
+    /**
+     * Gets the order value for this InductionResponse.
+     * 
+     * @return order
+     */
+    public java.lang.String getOrder() {
+        return order;
+    }
+
+
+    /**
+     * Sets the order value for this InductionResponse.
+     * 
+     * @param order
+     */
+    public void setOrder(java.lang.String order) {
+        this.order = order;
+    }
+
+
+    /**
+     * Gets the resultMessage value for this InductionResponse.
+     * 
+     * @return resultMessage
+     */
+    public java.lang.String getResultMessage() {
+        return resultMessage;
+    }
+
+
+    /**
+     * Sets the resultMessage value for this InductionResponse.
+     * 
+     * @param resultMessage
+     */
+    public void setResultMessage(java.lang.String resultMessage) {
+        this.resultMessage = resultMessage;
+    }
+
+
+    /**
+     * Gets the returnMessage value for this InductionResponse.
+     * 
+     * @return returnMessage
+     */
+    public java.lang.String getReturnMessage() {
+        return returnMessage;
+    }
+
+
+    /**
+     * Sets the returnMessage value for this InductionResponse.
+     * 
+     * @param returnMessage
+     */
+    public void setReturnMessage(java.lang.String returnMessage) {
+        this.returnMessage = returnMessage;
+    }
+
+
+    /**
+     * Gets the toteId value for this InductionResponse.
+     * 
+     * @return toteId
+     */
+    public java.lang.String getToteId() {
+        return toteId;
+    }
+
+
+    /**
+     * Sets the toteId value for this InductionResponse.
+     * 
+     * @param toteId
+     */
+    public void setToteId(java.lang.String toteId) {
+        this.toteId = toteId;
+    }
+
+    private java.lang.Object __equalsCalc = null;
+    public synchronized boolean equals(java.lang.Object obj) {
+        if (!(obj instanceof InductionResponse)) return false;
+        InductionResponse other = (InductionResponse) obj;
+        if (obj == null) return false;
+        if (this == obj) return true;
+        if (__equalsCalc != null) {
+            return (__equalsCalc == obj);
+        }
+        __equalsCalc = obj;
+        boolean _equals;
+        _equals = true && 
+            ((this.branchCode==null && other.getBranchCode()==null) || 
+             (this.branchCode!=null &&
+              this.branchCode.equals(other.getBranchCode()))) &&
+            ((this.cartonId==null && other.getCartonId()==null) || 
+             (this.cartonId!=null &&
+              this.cartonId.equals(other.getCartonId()))) &&
+            ((this.order==null && other.getOrder()==null) || 
+             (this.order!=null &&
+              this.order.equals(other.getOrder()))) &&
+            ((this.resultMessage==null && other.getResultMessage()==null) || 
+             (this.resultMessage!=null &&
+              this.resultMessage.equals(other.getResultMessage()))) &&
+            ((this.returnMessage==null && other.getReturnMessage()==null) || 
+             (this.returnMessage!=null &&
+              this.returnMessage.equals(other.getReturnMessage()))) &&
+            ((this.toteId==null && other.getToteId()==null) || 
+             (this.toteId!=null &&
+              this.toteId.equals(other.getToteId())));
+        __equalsCalc = null;
+        return _equals;
+    }
+
+    private boolean __hashCodeCalc = false;
+    public synchronized int hashCode() {
+        if (__hashCodeCalc) {
+            return 0;
+        }
+        __hashCodeCalc = true;
+        int _hashCode = 1;
+        if (getBranchCode() != null) {
+            _hashCode += getBranchCode().hashCode();
+        }
+        if (getCartonId() != null) {
+            _hashCode += getCartonId().hashCode();
+        }
+        if (getOrder() != null) {
+            _hashCode += getOrder().hashCode();
+        }
+        if (getResultMessage() != null) {
+            _hashCode += getResultMessage().hashCode();
+        }
+        if (getReturnMessage() != null) {
+            _hashCode += getReturnMessage().hashCode();
+        }
+        if (getToteId() != null) {
+            _hashCode += getToteId().hashCode();
+        }
+        __hashCodeCalc = false;
+        return _hashCode;
+    }
+
+    @Override
+    public String toString() {
+		return "InductionResponse [branchCode=" + branchCode + ", cartonId="
+				+ cartonId + ", order=" + order + ", resultMessage="
+				+ resultMessage + ", returnMessage=" + returnMessage
+				+ ", toteId=" + toteId + "]";
+	}
+
+}

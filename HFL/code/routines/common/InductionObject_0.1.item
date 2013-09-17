@@ -1,0 +1,403 @@
+/**
+ * InductionObject.java
+ *
+ * This file was auto-generated from WSDL
+ * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ */
+
+package routines;
+
+public class InductionObject  implements java.io.Serializable {
+    private java.lang.String branchCode;
+
+    private java.lang.String licensePlateCode;
+
+    private java.lang.String orderCode;
+
+    private java.lang.String orderSuffix;
+
+    private java.lang.String packLane;
+
+    private java.lang.String serverIp;
+
+    private java.lang.Integer serverPort;
+
+    private java.lang.String shipLane;
+
+    private java.lang.String stagingLocationCode;
+
+    private java.math.BigDecimal weight;
+
+    private java.lang.String zoneCodes;
+
+    private java.lang.String zoneGroupCode;
+
+    public InductionObject() {
+    }
+
+    public InductionObject(
+           java.lang.String branchCode,
+           java.lang.String licensePlateCode,
+           java.lang.String orderCode,
+           java.lang.String orderSuffix,
+           java.lang.String packLane,
+           java.lang.String serverIp,
+           java.lang.Integer serverPort,
+           java.lang.String shipLane,
+           java.lang.String stagingLocationCode,
+           java.math.BigDecimal weight,
+           java.lang.String zoneCodes,
+           java.lang.String zoneGroupCode) {
+           this.branchCode = branchCode;
+           this.licensePlateCode = licensePlateCode;
+           this.orderCode = orderCode;
+           this.orderSuffix = orderSuffix;
+           this.packLane = packLane;
+           this.serverIp = serverIp;
+           this.serverPort = serverPort;
+           this.shipLane = shipLane;
+           this.stagingLocationCode = stagingLocationCode;
+           this.weight = weight;
+           this.zoneCodes = zoneCodes;
+           this.zoneGroupCode = zoneGroupCode;
+    }
+
+
+    /**
+     * Gets the branchCode value for this InductionObject.
+     * 
+     * @return branchCode
+     */
+    public java.lang.String getBranchCode() {
+        return branchCode;
+    }
+
+
+    /**
+     * Sets the branchCode value for this InductionObject.
+     * 
+     * @param branchCode
+     */
+    public void setBranchCode(java.lang.String branchCode) {
+        this.branchCode = branchCode;
+    }
+
+
+    /**
+     * Gets the licensePlateCode value for this InductionObject.
+     * 
+     * @return licensePlateCode
+     */
+    public java.lang.String getLicensePlateCode() {
+        return licensePlateCode;
+    }
+
+
+    /**
+     * Sets the licensePlateCode value for this InductionObject.
+     * 
+     * @param licensePlateCode
+     */
+    public void setLicensePlateCode(java.lang.String licensePlateCode) {
+        this.licensePlateCode = licensePlateCode;
+    }
+
+
+    /**
+     * Gets the orderCode value for this InductionObject.
+     * 
+     * @return orderCode
+     */
+    public java.lang.String getOrderCode() {
+        return orderCode;
+    }
+
+
+    /**
+     * Sets the orderCode value for this InductionObject.
+     * 
+     * @param orderCode
+     */
+    public void setOrderCode(java.lang.String orderCode) {
+        this.orderCode = orderCode;
+    }
+
+
+    /**
+     * Gets the orderSuffix value for this InductionObject.
+     * 
+     * @return orderSuffix
+     */
+    public java.lang.String getOrderSuffix() {
+        return orderSuffix;
+    }
+
+
+    /**
+     * Sets the orderSuffix value for this InductionObject.
+     * 
+     * @param orderSuffix
+     */
+    public void setOrderSuffix(java.lang.String orderSuffix) {
+        this.orderSuffix = orderSuffix;
+    }
+
+
+    /**
+     * Gets the packLane value for this InductionObject.
+     * 
+     * @return packLane
+     */
+    public java.lang.String getPackLane() {
+        return packLane;
+    }
+
+
+    /**
+     * Sets the packLane value for this InductionObject.
+     * 
+     * @param packLane
+     */
+    public void setPackLane(java.lang.String packLane) {
+        this.packLane = packLane;
+    }
+
+
+    /**
+     * Gets the serverIp value for this InductionObject.
+     * 
+     * @return serverIp
+     */
+    public java.lang.String getServerIp() {
+        return serverIp;
+    }
+
+
+    /**
+     * Sets the serverIp value for this InductionObject.
+     * 
+     * @param serverIp
+     */
+    public void setServerIp(java.lang.String serverIp) {
+        this.serverIp = serverIp;
+    }
+
+
+    /**
+     * Gets the serverPort value for this InductionObject.
+     * 
+     * @return serverPort
+     */
+    public java.lang.Integer getServerPort() {
+        return serverPort;
+    }
+
+
+    /**
+     * Sets the serverPort value for this InductionObject.
+     * 
+     * @param serverPort
+     */
+    public void setServerPort(java.lang.Integer serverPort) {
+        this.serverPort = serverPort;
+    }
+
+
+    /**
+     * Gets the shipLane value for this InductionObject.
+     * 
+     * @return shipLane
+     */
+    public java.lang.String getShipLane() {
+        return shipLane;
+    }
+
+
+    /**
+     * Sets the shipLane value for this InductionObject.
+     * 
+     * @param shipLane
+     */
+    public void setShipLane(java.lang.String shipLane) {
+        this.shipLane = shipLane;
+    }
+
+
+    /**
+     * Gets the stagingLocationCode value for this InductionObject.
+     * 
+     * @return stagingLocationCode
+     */
+    public java.lang.String getStagingLocationCode() {
+        return stagingLocationCode;
+    }
+
+
+    /**
+     * Sets the stagingLocationCode value for this InductionObject.
+     * 
+     * @param stagingLocationCode
+     */
+    public void setStagingLocationCode(java.lang.String stagingLocationCode) {
+        this.stagingLocationCode = stagingLocationCode;
+    }
+
+
+    /**
+     * Gets the weight value for this InductionObject.
+     * 
+     * @return weight
+     */
+    public java.math.BigDecimal getWeight() {
+        return weight;
+    }
+
+
+    /**
+     * Sets the weight value for this InductionObject.
+     * 
+     * @param weight
+     */
+    public void setWeight(java.math.BigDecimal weight) {
+        this.weight = weight;
+    }
+
+
+    /**
+     * Gets the zoneCodes value for this InductionObject.
+     * 
+     * @return zoneCodes
+     */
+    public java.lang.String getZoneCodes() {
+        return zoneCodes;
+    }
+
+
+    /**
+     * Sets the zoneCodes value for this InductionObject.
+     * 
+     * @param zoneCodes
+     */
+    public void setZoneCodes(java.lang.String zoneCodes) {
+        this.zoneCodes = zoneCodes;
+    }
+
+
+    /**
+     * Gets the zoneGroupCode value for this InductionObject.
+     * 
+     * @return zoneGroupCode
+     */
+    public java.lang.String getZoneGroupCode() {
+        return zoneGroupCode;
+    }
+
+
+    /**
+     * Sets the zoneGroupCode value for this InductionObject.
+     * 
+     * @param zoneGroupCode
+     */
+    public void setZoneGroupCode(java.lang.String zoneGroupCode) {
+        this.zoneGroupCode = zoneGroupCode;
+    }
+
+    private java.lang.Object __equalsCalc = null;
+    public synchronized boolean equals(java.lang.Object obj) {
+        if (!(obj instanceof InductionObject)) return false;
+        InductionObject other = (InductionObject) obj;
+        if (obj == null) return false;
+        if (this == obj) return true;
+        if (__equalsCalc != null) {
+            return (__equalsCalc == obj);
+        }
+        __equalsCalc = obj;
+        boolean _equals;
+        _equals = true && 
+            ((this.branchCode==null && other.getBranchCode()==null) || 
+             (this.branchCode!=null &&
+              this.branchCode.equals(other.getBranchCode()))) &&
+            ((this.licensePlateCode==null && other.getLicensePlateCode()==null) || 
+             (this.licensePlateCode!=null &&
+              this.licensePlateCode.equals(other.getLicensePlateCode()))) &&
+            ((this.orderCode==null && other.getOrderCode()==null) || 
+             (this.orderCode!=null &&
+              this.orderCode.equals(other.getOrderCode()))) &&
+            ((this.orderSuffix==null && other.getOrderSuffix()==null) || 
+             (this.orderSuffix!=null &&
+              this.orderSuffix.equals(other.getOrderSuffix()))) &&
+            ((this.packLane==null && other.getPackLane()==null) || 
+             (this.packLane!=null &&
+              this.packLane.equals(other.getPackLane()))) &&
+            ((this.serverIp==null && other.getServerIp()==null) || 
+             (this.serverIp!=null &&
+              this.serverIp.equals(other.getServerIp()))) &&
+            ((this.serverPort==null && other.getServerPort()==null) || 
+             (this.serverPort!=null &&
+              this.serverPort.equals(other.getServerPort()))) &&
+            ((this.shipLane==null && other.getShipLane()==null) || 
+             (this.shipLane!=null &&
+              this.shipLane.equals(other.getShipLane()))) &&
+            ((this.stagingLocationCode==null && other.getStagingLocationCode()==null) || 
+             (this.stagingLocationCode!=null &&
+              this.stagingLocationCode.equals(other.getStagingLocationCode()))) &&
+            ((this.weight==null && other.getWeight()==null) || 
+             (this.weight!=null &&
+              this.weight.equals(other.getWeight()))) &&
+            ((this.zoneCodes==null && other.getZoneCodes()==null) || 
+             (this.zoneCodes!=null &&
+              this.zoneCodes.equals(other.getZoneCodes()))) &&
+            ((this.zoneGroupCode==null && other.getZoneGroupCode()==null) || 
+             (this.zoneGroupCode!=null &&
+              this.zoneGroupCode.equals(other.getZoneGroupCode())));
+        __equalsCalc = null;
+        return _equals;
+    }
+
+    private boolean __hashCodeCalc = false;
+    public synchronized int hashCode() {
+        if (__hashCodeCalc) {
+            return 0;
+        }
+        __hashCodeCalc = true;
+        int _hashCode = 1;
+        if (getBranchCode() != null) {
+            _hashCode += getBranchCode().hashCode();
+        }
+        if (getLicensePlateCode() != null) {
+            _hashCode += getLicensePlateCode().hashCode();
+        }
+        if (getOrderCode() != null) {
+            _hashCode += getOrderCode().hashCode();
+        }
+        if (getOrderSuffix() != null) {
+            _hashCode += getOrderSuffix().hashCode();
+        }
+        if (getPackLane() != null) {
+            _hashCode += getPackLane().hashCode();
+        }
+        if (getServerIp() != null) {
+            _hashCode += getServerIp().hashCode();
+        }
+        if (getServerPort() != null) {
+            _hashCode += getServerPort().hashCode();
+        }
+        if (getShipLane() != null) {
+            _hashCode += getShipLane().hashCode();
+        }
+        if (getStagingLocationCode() != null) {
+            _hashCode += getStagingLocationCode().hashCode();
+        }
+        if (getWeight() != null) {
+            _hashCode += getWeight().hashCode();
+        }
+        if (getZoneCodes() != null) {
+            _hashCode += getZoneCodes().hashCode();
+        }
+        if (getZoneGroupCode() != null) {
+            _hashCode += getZoneGroupCode().hashCode();
+        }
+        __hashCodeCalc = false;
+        return _hashCode;
+    }
+}

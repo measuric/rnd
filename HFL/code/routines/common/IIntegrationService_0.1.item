@@ -1,0 +1,24 @@
+/**
+ * IIntegrationService.java
+ *
+ * This file was auto-generated from WSDL
+ * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ */
+
+package routines;
+
+public interface IIntegrationService extends java.rmi.Remote {
+    public java.lang.String getSession(java.lang.String userName, byte[] password) throws java.rmi.RemoteException;
+    public java.lang.String pushEntity(java.lang.String sessionId, java.lang.String xml) throws java.rmi.RemoteException;
+    public java.lang.String pullEntity(java.lang.String sessionId, java.lang.String xml) throws java.rmi.RemoteException;
+    public int[] getTransactions(java.lang.String sessionId) throws java.rmi.RemoteException;
+    public routines.InductionObject[] getInductions(java.lang.String sessionId) throws java.rmi.RemoteException;
+    public routines.InductionResponse[] updateInductions(java.lang.String sessionId, routines.InductionResponse[] responses) throws java.rmi.RemoteException;
+    public routines.InductionObject[] getReceivingTotes(java.lang.String sessionId) throws java.rmi.RemoteException;
+    public void updateReceivingTotes(java.lang.String sessionId, routines.InductionResponse[] responses) throws java.rmi.RemoteException;
+    public routines.CrossDockReceiptHeader[] getCrossDockReceiptTransactions(java.lang.String sessionId) throws java.rmi.RemoteException;
+    public routines.IntegrationItemTransaction[] getStockAdjustmentTransactions(java.lang.String sessionId) throws java.rmi.RemoteException;
+    public routines.IntegrationItemTransaction[] getItemDimensionTransactions(java.lang.String sessionId) throws java.rmi.RemoteException;
+    public void updateItemTransactions(java.lang.String sessionId, routines.IntegrationItemTransaction[] itemTransactions) throws java.rmi.RemoteException;
+    public routines.IntegrationItemTransaction[] getSingleReceiveTransactions(java.lang.String sessionId) throws java.rmi.RemoteException;
+}

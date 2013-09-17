@@ -1,0 +1,42 @@
+package routines;
+
+import java.io.File;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.FileOutputStream;
+
+public class StringLineWriter {
+	
+	public static void write(String filePath, Boolean append, String lineToWrite) throws IOException {
+		
+		BufferedWriter writer = new BufferedWriter(new FileWriter(new File(filePath), append));
+		writer.write(lineToWrite);
+		writer.newLine();
+		writer.flush();
+		writer.close();
+	}
+	
+	public static void write(File file, Boolean append, String lineToWrite) throws IOException {
+		
+		BufferedWriter writer = new BufferedWriter(new FileWriter(file, append));
+		writer.write(lineToWrite);
+		writer.newLine();
+		writer.flush();
+		writer.close();
+	}
+	
+	public static void write(String filepath, String fileName, Boolean append, String lineToWrite) throws IOException {
+		File dir = new File(filepath);
+		File file = new File(dir,fileName);
+		if(!dir.exists()){
+			dir.mkdir();
+		}
+		if(!file.exists()){
+			file.createNewFile();
+		}
+		write(file,append,lineToWrite);
+	}
+	
+}
+

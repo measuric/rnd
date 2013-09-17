@@ -1,0 +1,69 @@
+package routines;
+import java.text.*;
+/*
+ * user specification: the function's comment should contain keys as follows: 1. write about the function's comment.but
+ * it must be before the "{talendTypes}" key.
+ * 
+ * 2. {talendTypes} 's value must be talend Type, it is required . its value should be one of: String, char | Character,
+ * long | Long, int | Integer, boolean | Boolean, byte | Byte, Date, double | Double, float | Float, Object, short |
+ * Short
+ * 
+ * 3. {Category} define a category for the Function. it is required. its value is user-defined .
+ * 
+ * 4. {param} 's format is: {param} <type>[(<default value or closed list values>)] <name>[ : <comment>]
+ * 
+ * <type> 's value should be one of: string, int, list, double, object, boolean, long, char, date. <name>'s value is the
+ * Function's parameter name. the {param} is optional. so if you the Function without the parameters. the {param} don't
+ * added. you can have many parameters for the Function.
+ * 
+ * 5. {example} gives a example for the Function. it is optional.
+ */
+public class populateKKWR {
+
+    /**
+     * helloExample: not return value, only print "hello" + message.
+     * 
+     * 
+     * {talendTypes} String
+     * 
+     * {Category} User Defined
+     * 
+     * {param} string("world") input: The string need to be printed.
+     * 
+     * {example} helloExemple("world") # hello world !.
+     */
+    public static void helloExample(String message) {
+        if (message == null) {
+            message = "World"; //$NON-NLS-1$
+        }
+        System.out.println("Hello " + message + " !"); //$NON-NLS-1$ //$NON-NLS-2$
+    }
+    
+    public static boolean calculatekkwr(Integer Kbroad,Integer Kexact,Integer Kphrase,Integer Knegativeb,Integer Knegativee,Integer Knegativep,Integer no_of_keywords)
+    {
+    	boolean kkwr = false;
+    	DecimalFormat oneDigit = new DecimalFormat("##.0");
+    	double broad,phrase,exact;
+    //	System.out.println("KBroad = "+ Kbroad + " KExact = " + Kexact + " KPhrase = "+Kphrase);
+    //	System.out.println("Knegativeb = "+ Knegativeb + " Knegativee = " + Knegativee + " Knegativep = "+Knegativep);
+    //	System.out.println("No of Kewords = "+no_of_keywords);
+    	if(!Relational.ISNULL(no_of_keywords))
+    	{
+    		if(no_of_keywords>0)
+    		{
+        	broad = Double.valueOf(oneDigit.format((float)(Kbroad+Knegativeb)/no_of_keywords));
+    	   	exact = Double.valueOf(oneDigit.format((float)(Kexact+Knegativee)/no_of_keywords));
+        	phrase =  Double.valueOf(oneDigit.format((float)(Kphrase+Knegativep)/no_of_keywords));
+        	System.out.println("Broad = "+ broad + " Exact = " + exact + " Phrase = "+phrase);
+    		if(broad == 0.5 && exact == 0.3 && phrase == 0.2)
+    		{
+    			kkwr=true;
+    		}
+    		else kkwr =false;
+    		}
+    	}
+    	return kkwr;
+    }
+    
+    }
+
